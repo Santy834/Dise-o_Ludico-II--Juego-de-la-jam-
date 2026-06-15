@@ -1,2 +1,7 @@
-res://Mundo.tscn
+res://objetos.tscn
 res://jugador.gd
+res://Mundo.tscn
+res://Escenas/Mundo.tscn
+res://Scripts/GameManager.gd
+res://Scripts/jugador.gd
+res://Scripts/objetos.gd

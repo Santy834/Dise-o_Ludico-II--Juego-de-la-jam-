@@ -1,6 +1,10 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1781497004
-icon.svg::CompressedTexture2D::970372848774603478::1781404474::1781404484::1::::<><><>0<>0<>0a3ce23d6dda8d43eecd48e7035c3c0b<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-jugador.gd::GDScript::1058421542705516036::1781496806::0::1::::<>CharacterBody2D<><>0<>0<><>::
-jugador.tscn::PackedScene::6475238483968052518::1781405272::0::1::::<><><>0<>0<><>::uid://n3b5tkdvnp1o::::res://icon.svg<>uid://pcybvxkxq7ie::::res://jugador.gd
-Mundo.tscn::PackedScene::1211674372905536513::1781496857::0::1::::<><><>0<>0<><>::uid://cyiwh47faij6e::::res://jugador.tscn
+::res://::1781542696
+icon.svg::CompressedTexture2D::970372848774603478::1781497325::1781497325::1::::<><><>0<>0<>0a3ce23d6dda8d43eecd48e7035c3c0b<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+::res://Escenas/::0
+jugador.tscn::PackedScene::6475238483968052518::1781542696::0::1::::<><><>0<>0<><>::uid://n3b5tkdvnp1o::::res://icon.svg<>uid://pcybvxkxq7ie::::res://Scripts/jugador.gd
+Mundo.tscn::PackedScene::1211674372905536513::1781542711::0::1::::<><><>0<>0<><>::uid://cyiwh47faij6e::::res://jugador.tscn
+objetos.tscn::PackedScene::4188410775460470301::1781542696::0::1::::<><><>0<>0<><>::uid://b3t5gqmsk4jtn::::res://Scripts/objetos.gd
+::res://Scripts/::1781542696
+jugador.gd::GDScript::1058421542705516036::1781542533::0::1::::<>CharacterBody2D<><>0<>0<><>::
+objetos.gd::GDScript::4392764567175174015::1781498803::0::1::::<>Area2D<><>0<>0<><>::
