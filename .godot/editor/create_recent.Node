@@ -1,0 +1,11 @@
+StaticBody2D
+Camera2D
+Node2D
+Sprite2D
+CollisionShape2D
+CharacterBody2D
+MeshInstance2D
+Area2D
+MeshInstance3D
+CollisionShape3D
+StaticBody3D
