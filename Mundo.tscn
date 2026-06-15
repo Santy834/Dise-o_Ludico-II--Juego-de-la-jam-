@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://ri7dnqh3jvjt"]
+
+[ext_resource type="PackedScene" uid="uid://cyiwh47faij6e" path="res://jugador.tscn" id="1_pe05s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xsxc0"]
+size = Vector2(1900, 20)
+
+[sub_resource type="BoxMesh" id="BoxMesh_pe05s"]
+size = Vector3(1900, 20, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_xywc0"]
+size = Vector3(120, 20, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ubi47"]
+size = Vector2(100, 20)
+
+[node name="Mundo" type="Node2D" unique_id=1544505612]
+
+[node name="Suelo" type="StaticBody2D" parent="." unique_id=73261874]
+position = Vector2(547, 624)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Suelo" unique_id=1732874289]
+shape = SubResource("RectangleShape2D_xsxc0")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Suelo" unique_id=249927708]
+mesh = SubResource("BoxMesh_pe05s")
+
+[node name="jugador" parent="." unique_id=89491122 instance=ExtResource("1_pe05s")]
+position = Vector2(783, 545)
+collision_mask = 3
+
+[node name="PlataformaContainer" type="Node2D" parent="." unique_id=393707141]
+
+[node name="Plataforma" type="StaticBody2D" parent="PlataformaContainer" unique_id=1845200697]
+position = Vector2(136, 432)
+disable_mode = 1
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="PlataformaContainer/Plataforma" unique_id=489349503]
+mesh = SubResource("BoxMesh_xywc0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlataformaContainer/Plataforma" unique_id=1547916146]
+shape = SubResource("RectangleShape2D_ubi47")
+
+[node name="Plataforma2" type="StaticBody2D" parent="PlataformaContainer" unique_id=1540246147]
+position = Vector2(400, 288)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlataformaContainer/Plataforma2" unique_id=487479452]
+shape = SubResource("RectangleShape2D_ubi47")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="PlataformaContainer/Plataforma2" unique_id=980646335]
+mesh = SubResource("BoxMesh_xywc0")
+
+[node name="Plataforma3" type="StaticBody2D" parent="PlataformaContainer" unique_id=293332063]
+position = Vector2(744, 280)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlataformaContainer/Plataforma3" unique_id=1245534160]
+shape = SubResource("RectangleShape2D_ubi47")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="PlataformaContainer/Plataforma3" unique_id=284280988]
+mesh = SubResource("BoxMesh_xywc0")
+
+[node name="Plataforma4" type="StaticBody2D" parent="PlataformaContainer" unique_id=1141560662]
+position = Vector2(1024, 128)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlataformaContainer/Plataforma4" unique_id=1871753249]
+shape = SubResource("RectangleShape2D_ubi47")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="PlataformaContainer/Plataforma4" unique_id=465260521]
+mesh = SubResource("BoxMesh_xywc0")
