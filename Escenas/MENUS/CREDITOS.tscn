@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://dkojecksll23c"]
+
+[ext_resource type="Script" uid="uid://bvsa3set1wg40" path="res://Escenas/MENUS/creditos.gd" id="1_2t5k8"]
+[ext_resource type="Texture2D" uid="uid://d1qsqywtnokk1" path="res://Imagenes/LOGO.png" id="1_lpvq6"]
+[ext_resource type="FontFile" uid="uid://b3oidbp3x1p7q" path="res://Fuentes/tinypixel.otf" id="2_t5p8t"]
+
+[node name="Control" type="Control" unique_id=1118839009]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2t5k8")
+
+[node name="Panel" type="Panel" parent="." unique_id=532437095]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Panel" unique_id=1388940189]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -187.0
+offset_top = -2.0
+offset_right = 413.0
+offset_bottom = 298.0
+grow_horizontal = 0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_lpvq6")
+
+[node name="Titulo" type="Label" parent="Panel" unique_id=1090843005]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 38.0
+offset_bottom = 78.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_t5p8t")
+theme_override_font_sizes/font_size = 35
+text = "CREDITOS"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="Panel" unique_id=1832786988]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 224.0
+offset_right = 509.0
+offset_bottom = 247.0
+theme_override_fonts/font = ExtResource("2_t5p8t")
+theme_override_font_sizes/font_size = 16
+text = "JOAQUIN GONZALES - GAME DESIGNER Y ARTISTA 2D"
+
+[node name="Label2" type="Label" parent="Panel" unique_id=1794976274]
+layout_mode = 0
+offset_left = 553.0
+offset_top = 224.0
+offset_right = 1092.0
+offset_bottom = 247.0
+theme_override_fonts/font = ExtResource("2_t5p8t")
+theme_override_font_sizes/font_size = 16
+text = "HERNAN BARSANTTI - GAME DESIGNER Y DIRECTOR CREATIVO"
+
+[node name="Label3" type="Label" parent="Panel" unique_id=1307365806]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 328.0
+offset_right = 454.0
+offset_bottom = 351.0
+theme_override_fonts/font = ExtResource("2_t5p8t")
+theme_override_font_sizes/font_size = 16
+text = "ALEX RUSSO - USABILITY DESINGNER  "
+
+[node name="Label4" type="Label" parent="Panel" unique_id=449533463]
+layout_mode = 0
+offset_left = 553.0
+offset_top = 328.0
+offset_right = 1068.0
+offset_bottom = 351.0
+theme_override_fonts/font = ExtResource("2_t5p8t")
+theme_override_font_sizes/font_size = 16
+text = "SANTIAGO BENITEZ - LEVEL DESIGNER Y WORLD DESIGNER"
+
+[node name="Button" type="Button" parent="." unique_id=757936472]
+layout_mode = 0
+offset_left = 912.0
+offset_top = 539.0
+offset_right = 1027.0
+offset_bottom = 577.0
+theme_override_fonts/font = ExtResource("2_t5p8t")
+theme_override_font_sizes/font_size = 25
+text = "VOLVER"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,113 @@
+[gd_scene format=3 uid="uid://bqp25btp7na4d"]
+
+[ext_resource type="Texture2D" uid="uid://d1qsqywtnokk1" path="res://Imagenes/LOGO.png" id="1_0hfa7"]
+[ext_resource type="Script" uid="uid://sa0nounn2joo" path="res://Escenas/MENUS/menu_opciones.gd" id="1_meaqg"]
+[ext_resource type="FontFile" uid="uid://b3oidbp3x1p7q" path="res://Fuentes/tinypixel.otf" id="2_meaqg"]
+
+[node name="MenuOpciones" type="Control" unique_id=970991157]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_meaqg")
+
+[node name="Panel" type="Panel" parent="." unique_id=473845831]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Panel" unique_id=1140225020]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -187.0
+offset_top = -2.0
+offset_right = 413.0
+offset_bottom = 298.0
+grow_horizontal = 0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_0hfa7")
+
+[node name="Titulo" type="Label" parent="Panel" unique_id=713742496]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 38.0
+offset_bottom = 78.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_meaqg")
+theme_override_font_sizes/font_size = 35
+text = "CONFIGURACION"
+horizontal_alignment = 1
+
+[node name="Resolucion" type="OptionButton" parent="Panel" unique_id=124934625]
+layout_mode = 0
+offset_left = 777.0
+offset_top = 181.0
+offset_right = 905.0
+offset_bottom = 223.0
+selected = 0
+item_count = 3
+popup/item_0/text = "800 x 600"
+popup/item_0/id = 0
+popup/item_1/text = "1280 x 720"
+popup/item_1/id = 1
+popup/item_2/text = "1920 x 1080"
+popup/item_2/id = 2
+
+[node name="Resolucion_Label" type="Label" parent="Panel" unique_id=2008204142]
+layout_mode = 0
+offset_left = 136.0
+offset_top = 189.0
+offset_right = 577.0
+offset_bottom = 224.0
+theme_override_fonts/font = ExtResource("2_meaqg")
+theme_override_font_sizes/font_size = 30
+text = "RESOLUCION DE PANTALLA"
+
+[node name="Config_Botones" type="Button" parent="Panel" unique_id=1451657013]
+layout_mode = 0
+offset_left = 712.0
+offset_top = 334.0
+offset_right = 973.0
+offset_bottom = 372.0
+theme_override_fonts/font = ExtResource("2_meaqg")
+theme_override_font_sizes/font_size = 25
+text = "ASIGNAR BOTONES"
+
+[node name="Barra_sonido" type="HSlider" parent="Panel" unique_id=47045868]
+layout_mode = 0
+offset_left = 487.0
+offset_top = 433.0
+offset_right = 988.0
+offset_bottom = 472.0
+value = 75.0
+tick_count = 5
+
+[node name="Label" type="Label" parent="Panel" unique_id=918604440]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 440.0
+offset_right = 387.0
+offset_bottom = 470.0
+theme_override_fonts/font = ExtResource("2_meaqg")
+theme_override_font_sizes/font_size = 25
+text = "AJUSTE DE SONIDO"
+
+[node name="Volver_BTN" type="Button" parent="Panel" unique_id=1413719381]
+layout_mode = 0
+offset_left = 912.0
+offset_top = 539.0
+offset_right = 1027.0
+offset_bottom = 577.0
+theme_override_fonts/font = ExtResource("2_meaqg")
+theme_override_font_sizes/font_size = 25
+text = "VOLVER"
+
+[connection signal="pressed" from="Panel/Volver_BTN" to="." method="_on_volver_btn_pressed"]

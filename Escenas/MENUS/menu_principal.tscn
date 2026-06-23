@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://denus4brcb4p7"]
+
+[ext_resource type="Script" uid="uid://t7e66pjl4p51" path="res://Escenas/MENUS/menu_principal.gd" id="1_ed6kc"]
+[ext_resource type="Texture2D" uid="uid://d1qsqywtnokk1" path="res://Imagenes/LOGO.png" id="1_gmcsc"]
+[ext_resource type="FontFile" uid="uid://b3oidbp3x1p7q" path="res://Fuentes/tinypixel.otf" id="2_ul6ys"]
+
+[node name="Menu principal" type="Control" unique_id=1749846172]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ed6kc")
+
+[node name="Fondo_Principal" type="Panel" parent="." unique_id=1355280208]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Fondo_Principal" unique_id=1423489484]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -300.0
+offset_right = 300.0
+offset_bottom = 300.0
+grow_horizontal = 2
+texture = ExtResource("1_gmcsc")
+
+[node name="Button" type="Button" parent="Fondo_Principal" unique_id=389985500]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -402.0
+offset_top = 342.0
+offset_right = -269.0
+offset_bottom = 390.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_ul6ys")
+theme_override_font_sizes/font_size = 35
+text = "JUGAR"
+
+[node name="creditos" type="Button" parent="Fondo_Principal" unique_id=136994337]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -437.0
+offset_top = 487.0
+offset_right = -234.0
+offset_bottom = 535.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_ul6ys")
+theme_override_font_sizes/font_size = 35
+text = "CREDITOS"
+
+[node name="salir" type="Button" parent="Fondo_Principal" unique_id=1172273042]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 174.0
+offset_top = 486.0
+offset_right = 307.0
+offset_bottom = 534.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_ul6ys")
+theme_override_font_sizes/font_size = 35
+text = "SALIR"
+
+[node name="opciones" type="Button" parent="Fondo_Principal" unique_id=590368129]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 174.0
+offset_top = 342.0
+offset_right = 307.0
+offset_bottom = 390.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_ul6ys")
+theme_override_font_sizes/font_size = 35
+text = "OPCIONES"
+
+[connection signal="pressed" from="Fondo_Principal/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Fondo_Principal/creditos" to="." method="_on_creditos_pressed"]
+[connection signal="pressed" from="Fondo_Principal/salir" to="." method="_on_salir_pressed"]
+[connection signal="pressed" from="Fondo_Principal/opciones" to="." method="_on_opciones_pressed"]

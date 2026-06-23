@@ -1,10 +1,94 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1781542696
+::res://::1782194942
+export_presets.cfg::TextFile::-1::1781994041::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D::970372848774603478::1781497325::1781497325::1::::<><><>0<>0<>0a3ce23d6dda8d43eecd48e7035c3c0b<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-::res://Escenas/::0
-jugador.tscn::PackedScene::6475238483968052518::1781542696::0::1::::<><><>0<>0<><>::uid://n3b5tkdvnp1o::::res://icon.svg<>uid://pcybvxkxq7ie::::res://Scripts/jugador.gd
-Mundo.tscn::PackedScene::1211674372905536513::1781542711::0::1::::<><><>0<>0<><>::uid://cyiwh47faij6e::::res://jugador.tscn
-objetos.tscn::PackedScene::4188410775460470301::1781542696::0::1::::<><><>0<>0<><>::uid://b3t5gqmsk4jtn::::res://Scripts/objetos.gd
-::res://Scripts/::1781542696
-jugador.gd::GDScript::1058421542705516036::1781542533::0::1::::<>CharacterBody2D<><>0<>0<><>::
-objetos.gd::GDScript::4392764567175174015::1781498803::0::1::::<>Area2D<><>0<>0<><>::
+menu_jugar.gd::GDScript::6066454790526060404::1782194557::0::1::::<>Control<><>0<>0<><>::
+menu_jugar.tscn::PackedScene::4514593155457831923::1782194580::0::1::::<><><>0<>0<><>::uid://d1qsqywtnokk1::::res://Imagenes/LOGO.png<>uid://csovvho3lsyka::::res://menu_jugar.gd<>uid://b3oidbp3x1p7q::::res://Fuentes/tinypixel.otf<>uid://cw7fvsg4w77oa::::res://Imagenes/IMAGEN.png
+poli.gd::GDScript::7836953848241404730::1782194942::0::1::::<>CharacterBody2D<><>0<>0<><>::
+bullet_personaje.tscn::PackedScene::1579893848823011256::1782194843::0::1::::<><><>0<>0<><>::uid://dwd6qshspdo76::::res://bullet_personaje.gd<>uid://v2myl0h3nkm5::::res://Imagenes/bullet.png
+bullet_personaje.gd::GDScript::8711521500928385055::1782194839::0::1::::<>Area2D<><>0<>0<><>::
+::res://Escenas/::1782194262
+gameover.tscn::PackedScene::8609643670272003398::1782194262::0::1::::<><><>0<>0<><>::uid://b3oidbp3x1p7q::::res://Fuentes/tinypixel.otf<>uid://cltay3uxytxbm::::res://Escenas/gameover.gd
+gameover.gd::GDScript::5584186186413164162::1782194209::0::1::::<>Control<><>0<>0<><>::
+::res://Escenas/MAPAS/::1782194998
+1_Limpio.png::CompressedTexture2D::1577687418325935456::1781885370::1781885370::1::::<><><>0<>0<>8d4366db3bdae56e6e4b55fdc2ba15aa<>res://.godot/imported/1_Limpio.png-6d72a5c66f156a845cd9bf78769819bc.ctex::
+bullet.tscn::PackedScene::1349034882863376635::1782143119::0::1::::<><><>0<>0<><>::uid://cws6ab1yxg5xs::::res://Scripts/bullet.gd<>uid://v2myl0h3nkm5::::res://Imagenes/bullet.png
+jugador.tscn::PackedScene::6475238483968052518::1782193161::0::1::::<><><>0<>0<><>::uid://pcybvxkxq7ie::::res://Scripts/jugador.gd<>uid://cwinvx8ygaetn::::res://Imagenes/Personajes/Arrojar/Sprit_Jhonny139.png<>uid://wrkvdyp5qhki::::res://bullet_personaje.tscn<>uid://diyelencc7chd::::res://Imagenes/Personajes/Arrojar/Sprit_Jhonny140.png<>uid://cw3rirg2uq4xr::::res://Imagenes/Personajes/Arrojar/Sprit_Jhonny141.png<>uid://c86vksm84o7ac::::res://Imagenes/Personajes/Arrojar/Sprit_Jhonny142.png<>uid://jryj4guq44r4::::res://Imagenes/Personajes/Arrojar/Sprit_Jhonny143.png<>uid://bqmarjpiy2oew::::res://Imagenes/Personajes/Salto/Sprit_Jhonny112.png<>uid://cwujx5e6a0h8q::::res://Imagenes/Personajes/Salto/Sprit_Jhonny105.png<>uid://oesnbqimt2mr::::res://Imagenes/Personajes/Salto/Sprit_Jhonny106.png<>uid://bb8vkb5mwxvxj::::res://Imagenes/Personajes/Idle/Sprit_Jhonny9.png<>uid://cjq6nlbpiur5h::::res://Imagenes/Personajes/Salto/Sprit_Jhonny108.png<>uid://c3rxj2uwbtyh8::::res://Imagenes/Personajes/Idle/Sprit_Jhonny10.png<>uid://dgv1btua0cwel::::res://Imagenes/Personajes/Idle/Sprit_Jhonny11.png<>uid://dw6widda3eqkk::::res://Imagenes/Personajes/Idle/Sprit_Jhonny12.png<>uid://cnhtsf86tbpam::::res://Imagenes/Personajes/Corer/Sprit_Jhonny61.png<>uid://wmxvp8hud8t8::::res://Scripts/canvas_layer.gd<>uid://bpdmjn5qyi1ar::::res://Imagenes/Dinero.png<>uid://datb4sljtpr34::::res://Imagenes/Personajes/Corer/Sprit_Jhonny62.png<>uid://i6sx5c8cf5xe::::res://Imagenes/Personajes/Corer/Sprit_Jhonny63.png<>uid://corevkimt7owe::::res://Imagenes/Personajes/Corer/Sprit_Jhonny64.png<>uid://xmdpvxhyq0t4::::res://Imagenes/Personajes/Corer/Sprit_Jhonny65.png<>uid://dm1rr7ak8v4se::::res://Imagenes/Personajes/Corer/Sprit_Jhonny66.png<>uid://cfp8tpif6uedu::::res://Imagenes/Personajes/Salto/Sprit_Jhonny104.png
+Mundo.tscn::PackedScene::1211674372905536513::1782194998::0::1::::<><><>0<>0<><>::uid://cyiwh47faij6e::::res://Escenas/MAPAS/jugador.tscn<>uid://b0w5rpwcp0q8d::::res://Escenas/MAPAS/objetos.tscn<>uid://4j5flrcrywsi::::res://Escenas/MAPAS/poli.tscn<>uid://n3b5tkdvnp1o::::res://icon.svg<>uid://thqn38n0w3df::::res://Escenas/MAPAS/bullet.tscn
+objetos.tscn::PackedScene::4188410775460470301::1781847848::0::1::::<><><>0<>0<><>::uid://b3t5gqmsk4jtn::::res://Scripts/objetos.gd
+poli.tscn::PackedScene::2055886908175080084::1782194942::0::1::::<><><>0<>0<><>::uid://djwjqqsaj0xpi::::res://poli.gd<>uid://capfgsnp2u0fd::::res://Imagenes/Poli/Arrojar/16x32 Sprites del proyecto139.png<>uid://cn2sg00osh0sk::::res://Imagenes/Poli/Arrojar/16x32 Sprites del proyecto140.png<>uid://ddfycsin7nyku::::res://Imagenes/Poli/Arrojar/16x32 Sprites del proyecto141.png<>uid://cwwueg7emiyts::::res://Imagenes/Poli/Arrojar/16x32 Sprites del proyecto142.png<>uid://6t563k6v5oww::::res://Imagenes/Poli/Arrojar/16x32 Sprites del proyecto143.png<>uid://dbtk44opvsvxs::::res://Imagenes/Poli/Arrojar/16x32 Sprites del proyecto144.png<>uid://b15de30me5sm::::res://Imagenes/Poli/16x32 Sprites del proyecto61.png<>uid://hp6bgteosmjx::::res://Imagenes/Poli/16x32 Sprites del proyecto62.png<>uid://dbadcybf5m1fd::::res://Imagenes/Poli/16x32 Sprites del proyecto63.png<>uid://f4nu55nhfi2o::::res://Imagenes/Poli/16x32 Sprites del proyecto64.png<>uid://b20k6we3gqjab::::res://Imagenes/Poli/16x32 Sprites del proyecto65.png<>uid://dkgos2w77benx::::res://Imagenes/Poli/16x32 Sprites del proyecto66.png
+::res://Escenas/MENUS/::1782194527
+creditos.gd::GDScript::3897596154392604859::1782141579::0::1::::<>Control<><>0<>0<><>::
+CREDITOS.tscn::PackedScene::7890605493454727918::1782141586::0::1::::<><><>0<>0<><>::uid://bvsa3set1wg40::::res://Escenas/MENUS/creditos.gd<>uid://d1qsqywtnokk1::::res://Imagenes/LOGO.png<>uid://b3oidbp3x1p7q::::res://Fuentes/tinypixel.otf
+menu_jugar.gd::GDScript::98699721450326226::1782194461::0::1::::<>Control<><>0<>0<><>::
+Menu_Jugar.tscn::PackedScene::3080208608405776354::1782194527::0::1::::<><><>0<>0<><>::uid://bn2tm576x13k::::res://Escenas/MENUS/menu_jugar.gd<>uid://d1qsqywtnokk1::::res://Imagenes/LOGO.png<>uid://b3oidbp3x1p7q::::res://Fuentes/tinypixel.otf
+menu_opciones.gd::GDScript::1264941092456603478::1782141525::0::1::::<>Control<><>0<>0<><>::
+Menu_Opciones.tscn::PackedScene::3542100863433797349::1782141525::0::1::::<><><>0<>0<><>::uid://d1qsqywtnokk1::::res://Imagenes/LOGO.png<>uid://sa0nounn2joo::::res://Escenas/MENUS/menu_opciones.gd<>uid://b3oidbp3x1p7q::::res://Fuentes/tinypixel.otf
+menu_principal.gd::GDScript::1399947996655343178::1782141676::0::1::::<>Control<><>0<>0<><>::
+menu_principal.tscn::PackedScene::7468102346076934042::1782141676::0::1::::<><><>0<>0<><>::uid://t7e66pjl4p51::::res://Escenas/MENUS/menu_principal.gd<>uid://d1qsqywtnokk1::::res://Imagenes/LOGO.png<>uid://b3oidbp3x1p7q::::res://Fuentes/tinypixel.otf
+::res://Fuentes/::1781803506
+tinypixel.otf::FontFile::4381100764438075404::1781803466::1781803506::1::::<><><>0<>0<>4ff9781bb1d51fe21a3c34b8a47bb1a7<>res://.godot/imported/tinypixel.otf-b451e6912babf2659cc6a89c9cc1e975.fontdata::
+::res://Imagenes/::1782223226
+bullet.png::CompressedTexture2D::1530475995458159398::1781944252::1781944252::1::::<><><>0<>0<>12fb9c28dd564f1f8b19bb544c36f091<>res://.godot/imported/bullet.png-9f1770fc30f41c379163815ec6c17e92.ctex::
+Corazón.png::CompressedTexture2D::7985338407623199276::1781737615::1781737615::1::::<><><>0<>0<>581d9e703973f9e48ab2130140f84499<>res://.godot/imported/Corazón.png-18ee79ab66947a0b982f72c5495667b5.ctex::
+Dinero.png::CompressedTexture2D::3446191877491175481::1781739538::1781739538::1::::<><><>0<>0<>d4ca343b06014d0c0d2d80829e0dcfd7<>res://.godot/imported/Dinero.png-f0f277b72e7e305d3c37f6c0d62308b6.ctex::
+fotograma0000.png::CompressedTexture2D::6725088503000442295::1781887000::1781887000::1::::<><><>0<>0<>3e1c23c09f837c229bc1d2e29f1eb560<>res://.godot/imported/fotograma0000.png-ca77c3b3bb445b220164d1124b21b11e.ctex::
+fotograma0001.png::CompressedTexture2D::5652203131770558007::1781887000::1781887000::1::::<><><>0<>0<>097d918c93f1dbea82d2739ba6eeadd3<>res://.godot/imported/fotograma0001.png-125fb8b081a9c5e0538aa62debf907f9.ctex::
+fotograma0002.png::CompressedTexture2D::2922079317676778121::1781887000::1781887000::1::::<><><>0<>0<>2858f0e814390c9c537e3c7f62153305<>res://.godot/imported/fotograma0002.png-8f665a45839cd75015714174a3546466.ctex::
+fotograma0003.png::CompressedTexture2D::5655542791432582578::1781887000::1781887000::1::::<><><>0<>0<>a97f2478d4584a3f1bcf65a95c485d26<>res://.godot/imported/fotograma0003.png-3b559732fdcd0d4d0ca55c5cd52dc393.ctex::
+fotograma0004.png::CompressedTexture2D::5758342098114405382::1781887000::1781887000::1::::<><><>0<>0<>4b563ac17737314151f70d8124e73acd<>res://.godot/imported/fotograma0004.png-d9393306dee5753a30644c1e6d58cddd.ctex::
+IMAGEN.png::CompressedTexture2D::6383398058226113500::1781808754::1781808766::1::::<><><>0<>0<>580d197d437103da17d151d26b45c511<>res://.godot/imported/IMAGEN.png-dad59efa574e5b2bdb1a30cbd2970c7d.ctex::
+LOGO.png::CompressedTexture2D::9018324803732684470::1781803948::1781803948::1::::<><><>0<>0<>9eae27ca7d744cce19aac7c1c815d078<>res://.godot/imported/LOGO.png-00be3765448b7b91b857d9a8dcf2a906.ctex::
+::res://Imagenes/ciudadano/::1782223243
+Sprit_Jhonny61.png::CompressedTexture2D::8681399815791053123::1782223243::1782223244::1::::<><><>0<>0<>2f6bf0bffae74bef44b63fe69112922d<>res://.godot/imported/Sprit_Jhonny61.png-f72c8c9df1da53f0be80042e703b3adb.ctex::
+Sprit_Jhonny62.png::CompressedTexture2D::7561555752110872097::1782223243::1782223244::1::::<><><>0<>0<>c02063dd740e1e3e27bf839c65b8f4d1<>res://.godot/imported/Sprit_Jhonny62.png-9388acabed731cfcb2f2f65b81d8dadc.ctex::
+Sprit_Jhonny63.png::CompressedTexture2D::6838632670955188954::1782223243::1782223244::1::::<><><>0<>0<>b56d39ebb0148ba6f3f6b24603a79425<>res://.godot/imported/Sprit_Jhonny63.png-2a5e5cc7506f06d8c6b71ee7911de7b9.ctex::
+Sprit_Jhonny64.png::CompressedTexture2D::2419560888039629898::1782223243::1782223244::1::::<><><>0<>0<>d5eefe1ae76f7e650ad13773f36ec819<>res://.godot/imported/Sprit_Jhonny64.png-c095a4a3c973580237fcb00b6b99bbd0.ctex::
+Sprit_Jhonny65.png::CompressedTexture2D::4495195221675937857::1782223243::1782223244::1::::<><><>0<>0<>77ebbdfb959f855148a4fdb651c5bc73<>res://.godot/imported/Sprit_Jhonny65.png-6e1d65e54f47cd2901150292e1f1f311.ctex::
+Sprit_Jhonny66.png::CompressedTexture2D::6519155601729849819::1782223243::1782223244::1::::<><><>0<>0<>3866fc6cb1f111858e047615bae20299<>res://.godot/imported/Sprit_Jhonny66.png-bb9fc5411fb20ba580e3437186ce9f3a.ctex::
+::res://Imagenes/Personajes/::1782223198
+::res://Imagenes/Personajes/Arrojar/::1782191074
+Sprit_Jhonny139.png::CompressedTexture2D::6334339032147432131::1782191074::1782191074::1::::<><><>0<>0<>daf4713aa91fafe6b1d694c8545945c7<>res://.godot/imported/Sprit_Jhonny139.png-2238d1f231c1d9b35a003c9a125f3ba4.ctex::
+Sprit_Jhonny140.png::CompressedTexture2D::7770580608255678361::1782191074::1782191074::1::::<><><>0<>0<>fc3871b04ad0ac869ee8478d3cf533a0<>res://.godot/imported/Sprit_Jhonny140.png-09d05da5729abefabb7bf817ce9914d8.ctex::
+Sprit_Jhonny141.png::CompressedTexture2D::6375845883184782643::1782191074::1782191074::1::::<><><>0<>0<>c6f586cef47c47baf043112a0beae2d9<>res://.godot/imported/Sprit_Jhonny141.png-a34d27b79d460906b5f1f66f80e1c8b0.ctex::
+Sprit_Jhonny142.png::CompressedTexture2D::7154362798100934114::1782191074::1782191074::1::::<><><>0<>0<>2cba5e3918744b90c0ba45eab92008c2<>res://.godot/imported/Sprit_Jhonny142.png-ffaf503570e845a6f683f551ecd87092.ctex::
+Sprit_Jhonny143.png::CompressedTexture2D::668268827910091323::1782191074::1782191074::1::::<><><>0<>0<>ee1b51f0cc89d2bb6d3fa40a43e108d8<>res://.godot/imported/Sprit_Jhonny143.png-7957d698ef5e1c1fdb94cf4fde348537.ctex::
+::res://Imagenes/Personajes/Corer/::1782169035
+Sprit_Jhonny61.png::CompressedTexture2D::5700933061141134112::1782169035::1782169035::1::::<><><>0<>0<>78db8bf9b269273a34b161d5c7c51504<>res://.godot/imported/Sprit_Jhonny61.png-f2464be119372f377753a24a3c9b1d54.ctex::
+Sprit_Jhonny62.png::CompressedTexture2D::7198598696270517921::1782169035::1782169035::1::::<><><>0<>0<>5ff4d0c2bf3058f182efe3f28d566851<>res://.godot/imported/Sprit_Jhonny62.png-8176b63c7e6561285e63fe77eaa151ed.ctex::
+Sprit_Jhonny63.png::CompressedTexture2D::626642018902107890::1782169035::1782169035::1::::<><><>0<>0<>0962258f298ab2721201e42768315b45<>res://.godot/imported/Sprit_Jhonny63.png-9e818218f931f362972b2bd9027317d3.ctex::
+Sprit_Jhonny64.png::CompressedTexture2D::5790860507944567256::1782169035::1782169035::1::::<><><>0<>0<>16376065f27d62a4777a4a216d78992c<>res://.godot/imported/Sprit_Jhonny64.png-33467b33fbaca9c67b2ca7218542f1f8.ctex::
+Sprit_Jhonny65.png::CompressedTexture2D::1639326013481968039::1782169035::1782169035::1::::<><><>0<>0<>a7712947f12701d80855e73985c7918e<>res://.godot/imported/Sprit_Jhonny65.png-3be829501dc18d5f0aa68449e2ba00d8.ctex::
+Sprit_Jhonny66.png::CompressedTexture2D::8056266224961176532::1782169035::1782169035::1::::<><><>0<>0<>4746041939aa993f71dad1432a237636<>res://.godot/imported/Sprit_Jhonny66.png-79494f22f23c3d6141127f52acb1137b.ctex::
+::res://Imagenes/Personajes/Idle/::1782168796
+Sprit_Jhonny9.png::CompressedTexture2D::2526027007445286915::1782168795::1782168796::1::::<><><>0<>0<>e43b9da670373c3e26f401d3e76d46b2<>res://.godot/imported/Sprit_Jhonny9.png-050aa462919db5d75dd744541fabb607.ctex::
+Sprit_Jhonny10.png::CompressedTexture2D::6774637424077130455::1782168795::1782168796::1::::<><><>0<>0<>8ead08a89cad8ef455b194fc1315fb32<>res://.godot/imported/Sprit_Jhonny10.png-798860a1cd92defd14d74c4b6527af45.ctex::
+Sprit_Jhonny11.png::CompressedTexture2D::7625328502221839371::1782168795::1782168796::1::::<><><>0<>0<>d7edc29ca86bcbc89324ee5816b3aced<>res://.godot/imported/Sprit_Jhonny11.png-122c8a735e327bdd01f1a8dea1616980.ctex::
+Sprit_Jhonny12.png::CompressedTexture2D::8768762543926027198::1782168795::1782168796::1::::<><><>0<>0<>ed542eebe74d46766639dbf663e1d475<>res://.godot/imported/Sprit_Jhonny12.png-25d1a500e02224178e9709dd92e10e87.ctex::
+::res://Imagenes/Personajes/Salto/::1782168950
+Sprit_Jhonny104.png::CompressedTexture2D::5156789643210828858::1782168867::1782168867::1::::<><><>0<>0<>10969b4176121ec20dcc0994eb86956d<>res://.godot/imported/Sprit_Jhonny104.png-1704bada2c2c92b1f4e9273037132ba3.ctex::
+Sprit_Jhonny105.png::CompressedTexture2D::6358872591988032822::1782168867::1782168867::1::::<><><>0<>0<>e124984dbf49dab569b4aae92c0d24f9<>res://.godot/imported/Sprit_Jhonny105.png-d8a4d617440abfbef987db404eee41fb.ctex::
+Sprit_Jhonny106.png::CompressedTexture2D::992017520759771117::1782168867::1782168867::1::::<><><>0<>0<>66b08296af73989934979030102e5b2d<>res://.godot/imported/Sprit_Jhonny106.png-b619cd66ac4d835118cfe16c294773f7.ctex::
+Sprit_Jhonny108.png::CompressedTexture2D::5439477026284658823::1782168867::1782168867::1::::<><><>0<>0<>0095b30738c9a55de0dcf0adeb73c251<>res://.godot/imported/Sprit_Jhonny108.png-692451c41621d1587f20b008033af744.ctex::
+Sprit_Jhonny109.png::CompressedTexture2D::4200915318744624757::1782168867::1782168867::1::::<><><>0<>0<>50c4046694f8869d6d9ea8120ffedcfc<>res://.godot/imported/Sprit_Jhonny109.png-0429dd5c750253d46641dc9792d195b0.ctex::
+Sprit_Jhonny112.png::CompressedTexture2D::3534245569725570286::1782168950::1782168950::1::::<><><>0<>0<>d467b7f1fb432180a14596d88b53782b<>res://.godot/imported/Sprit_Jhonny112.png-a11e18fe1c022a29696a08744f4684b7.ctex::
+::res://Imagenes/Poli/::1781939653
+16x32 Sprites del proyecto61.png::CompressedTexture2D::125689786908333544::1781939591::1781939591::1::::<><><>0<>0<>d84db4b95dcb0f9ee0803e798c321bf4<>res://.godot/imported/16x32 Sprites del proyecto61.png-bc301b40f3f5a858bbdbf1c2217f90f4.ctex::
+16x32 Sprites del proyecto62.png::CompressedTexture2D::524171929039345449::1781939591::1781939591::1::::<><><>0<>0<>cf06c588a1d64b7261dab6381b37cfba<>res://.godot/imported/16x32 Sprites del proyecto62.png-83695774262df7aa5aade094e050f35d.ctex::
+16x32 Sprites del proyecto63.png::CompressedTexture2D::7229637879656421685::1781939591::1781939591::1::::<><><>0<>0<>f096e86e60cd3b01e121e56b60e3e09b<>res://.godot/imported/16x32 Sprites del proyecto63.png-3c9ffd81dc32ae43494735d10e0b9531.ctex::
+16x32 Sprites del proyecto64.png::CompressedTexture2D::411637832486815740::1781939591::1781939591::1::::<><><>0<>0<>9d03d8fb6b33e717eee4a448bc64f584<>res://.godot/imported/16x32 Sprites del proyecto64.png-7d6cab42b86c6720c0e961a5a4812443.ctex::
+16x32 Sprites del proyecto65.png::CompressedTexture2D::4333792598283956229::1781939591::1781939591::1::::<><><>0<>0<>61aa5162af4c3081a63ffd2d5137e35a<>res://.godot/imported/16x32 Sprites del proyecto65.png-a124c388b70ae9c2261543b729fa1bb7.ctex::
+16x32 Sprites del proyecto66.png::CompressedTexture2D::7874420389785896041::1781939591::1781939591::1::::<><><>0<>0<>cb685e2fca8f0502e57a01c6fb726ab4<>res://.godot/imported/16x32 Sprites del proyecto66.png-eed2a9d29fd0ef20ebf9b4e71ac90487.ctex::
+::res://Imagenes/Poli/Arrojar/::1781939975
+16x32 Sprites del proyecto139.png::CompressedTexture2D::4804122299645548033::1781939975::1781939975::1::::<><><>0<>0<>7815e5c3022d41e749bfd57d0aac5347<>res://.godot/imported/16x32 Sprites del proyecto139.png-b4c6eb5f285b53ff65f4c157acb1d833.ctex::
+16x32 Sprites del proyecto140.png::CompressedTexture2D::5742139507037781418::1781939975::1781939975::1::::<><><>0<>0<>cc2ce11aa47de7d7776f3c026cc6a15e<>res://.godot/imported/16x32 Sprites del proyecto140.png-d2eacc1f2a583676f26d17e18be34fde.ctex::
+16x32 Sprites del proyecto141.png::CompressedTexture2D::7381612208590604368::1781939975::1781939975::1::::<><><>0<>0<>e65daefcd9f147b65447ca3f765abb1a<>res://.godot/imported/16x32 Sprites del proyecto141.png-62c6a0fb90e61a3b87708e55c86dd218.ctex::
+16x32 Sprites del proyecto142.png::CompressedTexture2D::6363634085815141240::1781939975::1781939975::1::::<><><>0<>0<>18a6153aa7c85e72876b1d06f2c06e83<>res://.godot/imported/16x32 Sprites del proyecto142.png-84717de7439a4bee720f90d1b7c80699.ctex::
+16x32 Sprites del proyecto143.png::CompressedTexture2D::2216955687039790810::1781939975::1781939975::1::::<><><>0<>0<>33143ce39b1717c930bbc8a90cc6fac4<>res://.godot/imported/16x32 Sprites del proyecto143.png-1e3da101ecad91c7d199cae7278f5b30.ctex::
+16x32 Sprites del proyecto144.png::CompressedTexture2D::7269334575510120884::1781939975::1781939975::1::::<><><>0<>0<>23b03ec60ad3e3f6085840630125d143<>res://.godot/imported/16x32 Sprites del proyecto144.png-a03f1fc80ebfbf1d7e2bc51e4915274c.ctex::
+::res://Scripts/::1782194527
+bullet.gd::GDScript::6356037047581473080::1782143119::0::1::::<>Area2D<><>0<>0<><>::
+canvas_layer.gd::GDScript::1570361924764790563::1782142960::0::1::::<>CanvasLayer<><>0<>0<><>::
+GameManager.gd::GDScript::880239661483928449::1782194527::0::1::::<>Node<><>0<>0<><>::
+jugador.gd::GDScript::1058421542705516036::1782194365::0::1::::<>CharacterBody2D<><>0<>0<><>::
+objetos.gd::GDScript::4392764567175174015::1781646710::0::1::::<>Area2D<><>0<>0<><>::

@@ -1,0 +1,195 @@
+[gd_scene format=3 uid="uid://cyiwh47faij6e"]
+
+[ext_resource type="Script" uid="uid://pcybvxkxq7ie" path="res://Scripts/jugador.gd" id="1_omvyu"]
+[ext_resource type="Texture2D" uid="uid://db1d7ka6eib2r" path="res://Imagenes/Personajes/Dash_Limpio0000.png" id="2_4l2qt"]
+[ext_resource type="Texture2D" uid="uid://wqijtfklgwx1" path="res://Escenas/MAPAS/1_Limpio.png" id="2_kk3td"]
+[ext_resource type="Texture2D" uid="uid://c22xhwhg2tmq6" path="res://Imagenes/fotograma0000.png" id="2_pi866"]
+[ext_resource type="Texture2D" uid="uid://dody05lcushbe" path="res://Imagenes/Personajes/2_Limpio.png" id="3_kvkrm"]
+[ext_resource type="Texture2D" uid="uid://cmr77vrkv1aih" path="res://Imagenes/fotograma0001.png" id="3_pwckj"]
+[ext_resource type="Texture2D" uid="uid://b0whu2pits1s6" path="res://Imagenes/Personajes/Dash_Limpio0001.png" id="3_wsiqk"]
+[ext_resource type="Texture2D" uid="uid://btygs3vv1yslr" path="res://Imagenes/Personajes/Dash_Limpio0002.png" id="4_8y0ji"]
+[ext_resource type="Texture2D" uid="uid://cglcps72mg57x" path="res://Imagenes/Personajes/3_Limpio.png" id="4_yehgh"]
+[ext_resource type="Texture2D" uid="uid://bhvqhpw56ebqv" path="res://Imagenes/fotograma0002.png" id="4_yimmk"]
+[ext_resource type="Texture2D" uid="uid://cmtt702abnojq" path="res://Imagenes/fotograma0003.png" id="5_1d46d"]
+[ext_resource type="Texture2D" uid="uid://dagi7la31j1kv" path="res://Imagenes/Personajes/Dash_Limpio0003.png" id="5_okd6a"]
+[ext_resource type="Texture2D" uid="uid://c2d7owc3picbg" path="res://Imagenes/Personajes/4_Limpio.png" id="5_s8wsp"]
+[ext_resource type="Texture2D" uid="uid://cobnb2le2rybm" path="res://Imagenes/fotograma0004.png" id="6_0b0d7"]
+[ext_resource type="Texture2D" uid="uid://swyqd4l3x8ys" path="res://Imagenes/Personajes/Dash_Limpio0004.png" id="6_mfmq8"]
+[ext_resource type="Texture2D" uid="uid://0f2ejrpd73e" path="res://Imagenes/Personajes/Dash_Limpio0005.png" id="7_j0n4s"]
+[ext_resource type="Texture2D" uid="uid://bmhgvk3iaargp" path="res://Imagenes/Personajes/1_Salto_Limpio.png" id="11_qw1qw"]
+[ext_resource type="Texture2D" uid="uid://djoaa3k1p01wb" path="res://Imagenes/Personajes/2_Salto limpio.png" id="12_awio0"]
+[ext_resource type="Texture2D" uid="uid://dhsvs1bn4yjr8" path="res://Imagenes/Personajes/3_Salto_Limpio.png" id="13_rfbtf"]
+[ext_resource type="Texture2D" uid="uid://dl1fmetvw2e5i" path="res://Imagenes/Corazón.png" id="20_8y0ji"]
+[ext_resource type="Texture2D" uid="uid://bpdmjn5qyi1ar" path="res://Imagenes/Dinero.png" id="21_okd6a"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bgivf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_4l2qt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_wsiqk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_8y0ji")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_okd6a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_mfmq8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_j0n4s")
+}],
+"loop": true,
+"name": &"DASH",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_awio0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_rfbtf")
+}],
+"loop": false,
+"name": &"Doble_JUMP",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_pi866")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_pwckj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_yimmk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_1d46d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_0b0d7")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_kk3td")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_kvkrm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_yehgh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_s8wsp")
+}],
+"loop": true,
+"name": &"Move",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_qw1qw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_awio0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_rfbtf")
+}],
+"loop": false,
+"name": &"Salto",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_omvyu"]
+size = Vector2(120, 120)
+
+[node name="jugador" type="CharacterBody2D" unique_id=89491122]
+script = ExtResource("1_omvyu")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1729458687]
+position = Vector2(0, -30)
+sprite_frames = SubResource("SpriteFrames_bgivf")
+animation = &"DASH"
+frame_progress = 0.63442993
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=204863169]
+shape = SubResource("RectangleShape2D_omvyu")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=317451070]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1423108051]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=44864413]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 40.0
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control" unique_id=990579200]
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 40.0
+
+[node name="Vida" type="Control" parent="CanvasLayer/Control/MarginContainer" unique_id=219138662]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/MarginContainer/Vida" unique_id=1329852728]
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 40.0
+
+[node name="LabelVida" type="Label" parent="CanvasLayer/Control/MarginContainer/Vida/VBoxContainer" unique_id=354580620]
+layout_mode = 2
+text = "VIDA:"
+
+[node name="VidaContainer" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/Vida/VBoxContainer" unique_id=249779471]
+layout_mode = 2
+
+[node name="Corazon3" type="TextureRect" parent="CanvasLayer/Control/MarginContainer/Vida/VBoxContainer/VidaContainer" unique_id=1045020747]
+layout_mode = 2
+texture = ExtResource("20_8y0ji")
+
+[node name="Corazon6" type="TextureRect" parent="CanvasLayer/Control/MarginContainer/Vida/VBoxContainer/VidaContainer" unique_id=435141652]
+layout_mode = 2
+texture = ExtResource("20_8y0ji")
+
+[node name="Corazon7" type="TextureRect" parent="CanvasLayer/Control/MarginContainer/Vida/VBoxContainer/VidaContainer" unique_id=937489497]
+layout_mode = 2
+texture = ExtResource("20_8y0ji")
+
+[node name="Corazon4" type="TextureRect" parent="CanvasLayer/Control/MarginContainer/Vida/VBoxContainer/VidaContainer" unique_id=1048884295]
+layout_mode = 2
+texture = ExtResource("20_8y0ji")
+
+[node name="Corazon5" type="TextureRect" parent="CanvasLayer/Control/MarginContainer/Vida/VBoxContainer/VidaContainer" unique_id=1045595856]
+layout_mode = 2
+texture = ExtResource("20_8y0ji")
+
+[node name="Dinero" type="Control" parent="CanvasLayer/Control/MarginContainer" unique_id=879580182]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/MarginContainer/Dinero" unique_id=1300257037]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/MarginContainer/Dinero/VBoxContainer" unique_id=1221991362]
+layout_mode = 2
+texture = ExtResource("21_okd6a")
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/MarginContainer/Dinero/VBoxContainer" unique_id=1209759350]
+layout_mode = 2
+text = "0$"
+horizontal_alignment = 1

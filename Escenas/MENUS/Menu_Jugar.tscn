@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://bj5ct6etjmr7o"]
+
+[ext_resource type="Script" uid="uid://bn2tm576x13k" path="res://Escenas/MENUS/menu_jugar.gd" id="1_xn0i4"]
+[ext_resource type="Texture2D" uid="uid://d1qsqywtnokk1" path="res://Imagenes/LOGO.png" id="1_xusub"]
+[ext_resource type="FontFile" uid="uid://b3oidbp3x1p7q" path="res://Fuentes/tinypixel.otf" id="2_xn0i4"]
+
+[node name="MenuJugar" type="Control" unique_id=2138490103]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xn0i4")
+
+[node name="Panel" type="Panel" parent="." unique_id=1158958419]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Panel" unique_id=1581044024]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -187.0
+offset_top = -2.0
+offset_right = 413.0
+offset_bottom = 298.0
+grow_horizontal = 0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_xusub")
+
+[node name="Titulo" type="Label" parent="Panel" unique_id=1411132520]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -235.0
+offset_top = 48.0
+offset_right = 235.0
+offset_bottom = 88.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_xn0i4")
+theme_override_font_sizes/font_size = 35
+text = "SELECCIONE UN OPCION."
+
+[node name="NewGame_BTN" type="Button" parent="Panel" unique_id=390564696]
+layout_mode = 0
+offset_left = 183.0
+offset_top = 303.0
+offset_right = 400.0
+offset_bottom = 339.0
+theme_override_fonts/font = ExtResource("2_xn0i4")
+theme_override_font_sizes/font_size = 24
+text = "NUEVA PARTIDO"
+
+[node name="Selct_BTN" type="Button" parent="Panel" unique_id=295153041]
+layout_mode = 0
+offset_left = 763.0
+offset_top = 301.0
+offset_right = 997.0
+offset_bottom = 365.0
+theme_override_fonts/font = ExtResource("2_xn0i4")
+theme_override_font_sizes/font_size = 24
+text = "SELECCIONAR UN
+NIVEL"
+
+[node name="Volver_BTN" type="Button" parent="Panel" unique_id=2094578002]
+layout_mode = 0
+offset_left = 912.0
+offset_top = 539.0
+offset_right = 1027.0
+offset_bottom = 577.0
+theme_override_fonts/font = ExtResource("2_xn0i4")
+theme_override_font_sizes/font_size = 25
+text = "VOLVER"
+
+[connection signal="pressed" from="Panel/NewGame_BTN" to="." method="_on_new_game_btn_pressed"]
+[connection signal="pressed" from="Panel/Selct_BTN" to="." method="_on_selct_btn_pressed"]
+[connection signal="pressed" from="Panel/Volver_BTN" to="." method="_on_volver_btn_pressed"]

@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://4j5flrcrywsi"]
+
+[ext_resource type="Script" uid="uid://djwjqqsaj0xpi" path="res://poli.gd" id="1_6wp88"]
+[ext_resource type="Texture2D" uid="uid://capfgsnp2u0fd" path="res://Imagenes/Poli/Arrojar/16x32 Sprites del proyecto139.png" id="2_dr5ej"]
+[ext_resource type="PackedScene" uid="uid://thqn38n0w3df" path="res://Escenas/MAPAS/bullet.tscn" id="2_nv7um"]
+[ext_resource type="Texture2D" uid="uid://cn2sg00osh0sk" path="res://Imagenes/Poli/Arrojar/16x32 Sprites del proyecto140.png" id="3_nv7um"]
+[ext_resource type="Texture2D" uid="uid://ddfycsin7nyku" path="res://Imagenes/Poli/Arrojar/16x32 Sprites del proyecto141.png" id="4_tnxup"]
+[ext_resource type="Texture2D" uid="uid://cwwueg7emiyts" path="res://Imagenes/Poli/Arrojar/16x32 Sprites del proyecto142.png" id="5_7kagp"]
+[ext_resource type="Texture2D" uid="uid://6t563k6v5oww" path="res://Imagenes/Poli/Arrojar/16x32 Sprites del proyecto143.png" id="6_ya7bv"]
+[ext_resource type="Texture2D" uid="uid://dbtk44opvsvxs" path="res://Imagenes/Poli/Arrojar/16x32 Sprites del proyecto144.png" id="7_ntu5u"]
+[ext_resource type="Texture2D" uid="uid://b15de30me5sm" path="res://Imagenes/Poli/16x32 Sprites del proyecto61.png" id="8_5ihsf"]
+[ext_resource type="Texture2D" uid="uid://hp6bgteosmjx" path="res://Imagenes/Poli/16x32 Sprites del proyecto62.png" id="9_pmxb5"]
+[ext_resource type="Texture2D" uid="uid://dbadcybf5m1fd" path="res://Imagenes/Poli/16x32 Sprites del proyecto63.png" id="10_mkjy5"]
+[ext_resource type="Texture2D" uid="uid://f4nu55nhfi2o" path="res://Imagenes/Poli/16x32 Sprites del proyecto64.png" id="11_6xkes"]
+[ext_resource type="Texture2D" uid="uid://b20k6we3gqjab" path="res://Imagenes/Poli/16x32 Sprites del proyecto65.png" id="12_kwv7i"]
+[ext_resource type="Texture2D" uid="uid://dkgos2w77benx" path="res://Imagenes/Poli/16x32 Sprites del proyecto66.png" id="13_gbbvg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_todgt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_dr5ej")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_nv7um")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_tnxup")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_7kagp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ya7bv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ntu5u")
+}],
+"loop": false,
+"name": &"Arrojar",
+"speed": 6.3
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_5ihsf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_pmxb5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_mkjy5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_6xkes")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_kwv7i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_gbbvg")
+}],
+"loop": true,
+"name": &"Movimiento",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fhv2d"]
+radius = 54.0
+height = 186.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6wp88"]
+radius = 76.0
+height = 234.0
+
+[node name="Poli" type="CharacterBody2D" unique_id=1959539958 groups=["Policia"]]
+collision_layer = 2
+collision_mask = 17
+script = ExtResource("1_6wp88")
+bullet_scene = ExtResource("2_nv7um")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1982455411]
+sprite_frames = SubResource("SpriteFrames_todgt")
+animation = &"Arrojar"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2024858494]
+position = Vector2(0, 68)
+shape = SubResource("CapsuleShape2D_fhv2d")
+
+[node name="Area_Ataque" type="Area2D" parent="." unique_id=1566647537]
+position = Vector2(0, 23)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area_Ataque" unique_id=1093509718]
+position = Vector2(-11, 16)
+shape = SubResource("CapsuleShape2D_6wp88")
+debug_color = Color(0.9341368, 0.25804165, 0, 0.41960785)
+
+[connection signal="body_entered" from="Area_Ataque" to="." method="_on_area_ataque_body_entered"]
+[connection signal="body_exited" from="Area_Ataque" to="." method="_on_area_ataque_body_exited"]

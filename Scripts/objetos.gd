@@ -10,7 +10,7 @@ enum ItemType {
 	
 }
 
-@export var icon: Sprite2D
+@export var icon: CompressedTexture2D
 @export var item: ItemType
 
 
@@ -20,7 +20,7 @@ var precio : int
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	sprite.texture = icon.texture
+	sprite.texture = icon
 	actualizar_precio()
 	randomize()
 
@@ -43,3 +43,4 @@ func actualizar_precio():
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Jugador"):
 		body.sumar_dinero(precio)
+		queue_free()

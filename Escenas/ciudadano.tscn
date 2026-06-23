@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://fj8q7hpwtr0h"]
+
+[ext_resource type="Script" uid="uid://cyatebkknwwxu" path="res://ciudadano.gd" id="1_5mwmq"]
+[ext_resource type="Texture2D" uid="uid://dvxlne53obxwt" path="res://Imagenes/ciudadano/Sprit_Jhonny61.png" id="2_gsd0u"]
+[ext_resource type="Texture2D" uid="uid://dfy4yote5aiof" path="res://Imagenes/ciudadano/Sprit_Jhonny62.png" id="3_a5f0p"]
+[ext_resource type="Texture2D" uid="uid://c4oxjs1u2k771" path="res://Imagenes/ciudadano/Sprit_Jhonny63.png" id="4_0uv7x"]
+[ext_resource type="Texture2D" uid="uid://baqb2xmgesb27" path="res://Imagenes/ciudadano/Sprit_Jhonny64.png" id="5_exdl1"]
+[ext_resource type="Texture2D" uid="uid://b5brhdcv4wrc0" path="res://Imagenes/ciudadano/Sprit_Jhonny65.png" id="6_47eub"]
+[ext_resource type="Texture2D" uid="uid://cy46smt7iy5r8" path="res://Imagenes/ciudadano/Sprit_Jhonny66.png" id="7_ui3s6"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g45yf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_gsd0u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_a5f0p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_0uv7x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_exdl1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_47eub")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ui3s6")
+}],
+"loop": true,
+"name": &"Move",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vtcbl"]
+radius = 29.0
+height = 98.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2bg6n"]
+radius = 76.0
+height = 242.0
+
+[node name="Ciudadano" type="CharacterBody2D" unique_id=1475033763]
+collision_layer = 8
+collision_mask = 0
+script = ExtResource("1_5mwmq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=633183736]
+sprite_frames = SubResource("SpriteFrames_g45yf")
+animation = &"Move"
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1258281478]
+position = Vector2(0, 74)
+shape = SubResource("CapsuleShape2D_vtcbl")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1106172681]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=63276780]
+position = Vector2(0, 16)
+shape = SubResource("CapsuleShape2D_2bg6n")
+debug_color = Color(0.98049206, 0.14011756, 0.011949902, 0.41960785)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

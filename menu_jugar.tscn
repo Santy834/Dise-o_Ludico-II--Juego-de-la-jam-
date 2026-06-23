@@ -1,0 +1,169 @@
+[gd_scene format=3 uid="uid://b5k5xpjgkwtrv"]
+
+[ext_resource type="Texture2D" uid="uid://d1qsqywtnokk1" path="res://Imagenes/LOGO.png" id="1_atwl3"]
+[ext_resource type="Script" uid="uid://csovvho3lsyka" path="res://menu_jugar.gd" id="1_uw27b"]
+[ext_resource type="FontFile" uid="uid://b3oidbp3x1p7q" path="res://Fuentes/tinypixel.otf" id="2_uw27b"]
+[ext_resource type="Texture2D" uid="uid://cw7fvsg4w77oa" path="res://Imagenes/IMAGEN.png" id="3_sqoty"]
+
+[node name="MenuJugar" type="Control" unique_id=2138490103]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uw27b")
+
+[node name="Panel" type="Panel" parent="." unique_id=1158958419]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Panel" unique_id=1581044024]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -187.0
+offset_top = -2.0
+offset_right = 413.0
+offset_bottom = 298.0
+grow_horizontal = 0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_atwl3")
+
+[node name="Titulo" type="Label" parent="Panel" unique_id=1411132520]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -235.0
+offset_top = 48.0
+offset_right = 235.0
+offset_bottom = 88.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_uw27b")
+theme_override_font_sizes/font_size = 35
+text = "SELECCIONE UN NIVEL."
+
+[node name="Level_1" type="Button" parent="Panel" unique_id=390564696]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 32.0
+offset_top = -18.0
+offset_right = 249.0
+offset_bottom = 18.0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_uw27b")
+theme_override_font_sizes/font_size = 24
+icon = ExtResource("3_sqoty")
+
+[node name="Label" type="Label" parent="Panel/Level_1" unique_id=1754366575]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_uw27b")
+theme_override_font_sizes/font_size = 30
+text = "1"
+
+[node name="Level_2" type="Button" parent="Panel" unique_id=696631851]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -108.5
+offset_top = -18.0
+offset_right = 108.5
+offset_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_uw27b")
+theme_override_font_sizes/font_size = 24
+icon = ExtResource("3_sqoty")
+
+[node name="Label" type="Label" parent="Panel/Level_2" unique_id=938497682]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_uw27b")
+theme_override_font_sizes/font_size = 30
+text = "🔒 "
+
+[node name="Level_3" type="Button" parent="Panel" unique_id=295153041]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -266.0
+offset_top = -32.0
+offset_right = -32.0
+offset_bottom = 32.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_uw27b")
+theme_override_font_sizes/font_size = 24
+icon = ExtResource("3_sqoty")
+
+[node name="Label" type="Label" parent="Panel/Level_3" unique_id=1764029550]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_uw27b")
+theme_override_font_sizes/font_size = 30
+text = "🔒 "
+
+[node name="BTN_Volver" type="Button" parent="Panel" unique_id=2058894490]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -158.0
+offset_top = -72.0
+offset_right = -64.0
+offset_bottom = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_uw27b")
+theme_override_font_sizes/font_size = 20
+text = "VOLVER"
+
+[connection signal="pressed" from="Panel/Level_1" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="Panel/BTN_Volver" to="." method="_on_btn_volver_pressed"]

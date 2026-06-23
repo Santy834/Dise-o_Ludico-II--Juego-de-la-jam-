@@ -1,0 +1,200 @@
+[gd_scene format=3 uid="uid://cyiwh47faij6e"]
+
+[ext_resource type="Script" uid="uid://pcybvxkxq7ie" path="res://Scripts/jugador.gd" id="1_omvyu"]
+[ext_resource type="Texture2D" uid="uid://cwinvx8ygaetn" path="res://Imagenes/Personajes/Arrojar/Sprit_Jhonny139.png" id="2_d8fsc"]
+[ext_resource type="PackedScene" uid="uid://wrkvdyp5qhki" path="res://bullet_personaje.tscn" id="2_j0n4s"]
+[ext_resource type="Texture2D" uid="uid://diyelencc7chd" path="res://Imagenes/Personajes/Arrojar/Sprit_Jhonny140.png" id="3_8hdxl"]
+[ext_resource type="Texture2D" uid="uid://cw3rirg2uq4xr" path="res://Imagenes/Personajes/Arrojar/Sprit_Jhonny141.png" id="4_rg0cj"]
+[ext_resource type="Texture2D" uid="uid://c86vksm84o7ac" path="res://Imagenes/Personajes/Arrojar/Sprit_Jhonny142.png" id="5_3iqft"]
+[ext_resource type="Texture2D" uid="uid://jryj4guq44r4" path="res://Imagenes/Personajes/Arrojar/Sprit_Jhonny143.png" id="6_0dqy3"]
+[ext_resource type="Texture2D" uid="uid://bqmarjpiy2oew" path="res://Imagenes/Personajes/Salto/Sprit_Jhonny112.png" id="7_mfmq8"]
+[ext_resource type="Texture2D" uid="uid://cwujx5e6a0h8q" path="res://Imagenes/Personajes/Salto/Sprit_Jhonny105.png" id="13_d8fsc"]
+[ext_resource type="Texture2D" uid="uid://oesnbqimt2mr" path="res://Imagenes/Personajes/Salto/Sprit_Jhonny106.png" id="14_8hdxl"]
+[ext_resource type="Texture2D" uid="uid://bb8vkb5mwxvxj" path="res://Imagenes/Personajes/Idle/Sprit_Jhonny9.png" id="15_a2hj8"]
+[ext_resource type="Texture2D" uid="uid://cjq6nlbpiur5h" path="res://Imagenes/Personajes/Salto/Sprit_Jhonny108.png" id="15_rg0cj"]
+[ext_resource type="Texture2D" uid="uid://c3rxj2uwbtyh8" path="res://Imagenes/Personajes/Idle/Sprit_Jhonny10.png" id="16_d8fsc"]
+[ext_resource type="Texture2D" uid="uid://dgv1btua0cwel" path="res://Imagenes/Personajes/Idle/Sprit_Jhonny11.png" id="17_8hdxl"]
+[ext_resource type="Texture2D" uid="uid://dw6widda3eqkk" path="res://Imagenes/Personajes/Idle/Sprit_Jhonny12.png" id="18_rg0cj"]
+[ext_resource type="Texture2D" uid="uid://cnhtsf86tbpam" path="res://Imagenes/Personajes/Corer/Sprit_Jhonny61.png" id="20_1dhpb"]
+[ext_resource type="Script" uid="uid://wmxvp8hud8t8" path="res://Scripts/canvas_layer.gd" id="20_8y0ji"]
+[ext_resource type="Texture2D" uid="uid://bpdmjn5qyi1ar" path="res://Imagenes/Dinero.png" id="21_okd6a"]
+[ext_resource type="Texture2D" uid="uid://datb4sljtpr34" path="res://Imagenes/Personajes/Corer/Sprit_Jhonny62.png" id="21_qny1t"]
+[ext_resource type="Texture2D" uid="uid://i6sx5c8cf5xe" path="res://Imagenes/Personajes/Corer/Sprit_Jhonny63.png" id="22_lkcpi"]
+[ext_resource type="Texture2D" uid="uid://corevkimt7owe" path="res://Imagenes/Personajes/Corer/Sprit_Jhonny64.png" id="23_uffws"]
+[ext_resource type="Texture2D" uid="uid://xmdpvxhyq0t4" path="res://Imagenes/Personajes/Corer/Sprit_Jhonny65.png" id="24_pyc74"]
+[ext_resource type="Texture2D" uid="uid://dm1rr7ak8v4se" path="res://Imagenes/Personajes/Corer/Sprit_Jhonny66.png" id="25_xxq5j"]
+[ext_resource type="Texture2D" uid="uid://cfp8tpif6uedu" path="res://Imagenes/Personajes/Salto/Sprit_Jhonny104.png" id="26_3iqft"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bgivf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_d8fsc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8hdxl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_rg0cj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_3iqft")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_0dqy3")
+}],
+"loop": false,
+"name": &"Arrojar",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_mfmq8")
+}],
+"loop": false,
+"name": &"DASH",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_d8fsc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_8hdxl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_rg0cj")
+}],
+"loop": false,
+"name": &"Doble_JUMP",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_a2hj8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_d8fsc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_8hdxl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_rg0cj")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_1dhpb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_qny1t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_lkcpi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_uffws")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_pyc74")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_xxq5j")
+}],
+"loop": true,
+"name": &"Move",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_3iqft")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_d8fsc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_8hdxl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_rg0cj")
+}],
+"loop": false,
+"name": &"Salto",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_omvyu"]
+size = Vector2(120, 120)
+
+[node name="jugador" type="CharacterBody2D" unique_id=89491122]
+script = ExtResource("1_omvyu")
+bullet_scene = ExtResource("2_j0n4s")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1729458687]
+position = Vector2(1, -30)
+sprite_frames = SubResource("SpriteFrames_bgivf")
+animation = &"Salto"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=204863169]
+position = Vector2(0, 34)
+shape = SubResource("RectangleShape2D_omvyu")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=317451070]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1423108051]
+script = ExtResource("20_8y0ji")
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=44864413]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 40.0
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control" unique_id=990579200]
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 40.0
+
+[node name="Vida" type="Control" parent="CanvasLayer/Control/MarginContainer" unique_id=219138662]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/MarginContainer/Vida" unique_id=1329852728]
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 40.0
+
+[node name="LabelVida" type="Label" parent="CanvasLayer/Control/MarginContainer/Vida/VBoxContainer" unique_id=354580620]
+layout_mode = 2
+text = "VIDA:"
+
+[node name="VidaContainer" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/Vida/VBoxContainer" unique_id=249779471]
+layout_mode = 2
+
+[node name="Dinero" type="Control" parent="CanvasLayer/Control/MarginContainer" unique_id=879580182]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/MarginContainer/Dinero" unique_id=1300257037]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/MarginContainer/Dinero/VBoxContainer" unique_id=1221991362]
+layout_mode = 2
+texture = ExtResource("21_okd6a")
+
+[node name="Dinero_Lb" type="Label" parent="CanvasLayer/Control/MarginContainer/Dinero/VBoxContainer" unique_id=1209759350]
+layout_mode = 2
+text = "0$"
+horizontal_alignment = 1
+
+[node name="Cooldown_vida" type="Timer" parent="." unique_id=2022166579]
+wait_time = 1.5
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="timeout" from="Cooldown_vida" to="." method="_on_cooldown_vida_timeout"]
