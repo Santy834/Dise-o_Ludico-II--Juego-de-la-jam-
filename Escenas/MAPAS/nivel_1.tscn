@@ -1,0 +1,176 @@
+[gd_scene format=3 uid="uid://dnpoed3003ku3"]
+
+[ext_resource type="Script" uid="uid://ca2516rdfpmau" path="res://Escenas/MAPAS/nivel_1.gd" id="1_2qgbp"]
+[ext_resource type="Texture2D" uid="uid://d383t0i1b3rqt" path="res://Imagenes/Ciudad.png" id="1_660tx"]
+[ext_resource type="PackedScene" uid="uid://cyiwh47faij6e" path="res://Escenas/MAPAS/jugador.tscn" id="2_2qgbp"]
+[ext_resource type="PackedScene" uid="uid://fj8q7hpwtr0h" path="res://Escenas/ciudadano.tscn" id="2_n146w"]
+[ext_resource type="PackedScene" uid="uid://4j5flrcrywsi" path="res://Escenas/MAPAS/poli.tscn" id="2_w5fqw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2qgbp"]
+size = Vector2(120, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n146w"]
+size = Vector2(6350, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w5fqw"]
+size = Vector2(20, 600)
+
+[node name="Nivel_1" type="Node2D" unique_id=1563929464]
+script = ExtResource("1_2qgbp")
+policia_scene = ExtResource("2_w5fqw")
+ciudadano_scene = ExtResource("2_n146w")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1670463389]
+position = Vector2(0, 329.5)
+scale = Vector2(1, 1.30625)
+texture = ExtResource("1_660tx")
+
+[node name="jugador" parent="." unique_id=89491122 instance=ExtResource("2_2qgbp")]
+position = Vector2(-3088, 327)
+
+[node name="Techos_container" type="Node" parent="." unique_id=1766723050]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Techos_container" unique_id=472300368]
+position = Vector2(-2602, 439)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Techos_container/StaticBody2D" unique_id=2093084703]
+shape = SubResource("RectangleShape2D_2qgbp")
+
+[node name="StaticBody2D12" type="StaticBody2D" parent="Techos_container" unique_id=179208522]
+position = Vector2(-2398, 438)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Techos_container/StaticBody2D12" unique_id=1500110307]
+shape = SubResource("RectangleShape2D_2qgbp")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Techos_container" unique_id=1366909669]
+position = Vector2(-2202, 439)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Techos_container/StaticBody2D2" unique_id=669898109]
+shape = SubResource("RectangleShape2D_2qgbp")
+
+[node name="StaticBody2D13" type="StaticBody2D" parent="Techos_container" unique_id=586809738]
+position = Vector2(-1871, 437)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Techos_container/StaticBody2D13" unique_id=266836764]
+shape = SubResource("RectangleShape2D_2qgbp")
+
+[node name="StaticBody2D14" type="StaticBody2D" parent="Techos_container" unique_id=1295566790]
+position = Vector2(-1993, 437)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Techos_container/StaticBody2D14" unique_id=399293823]
+shape = SubResource("RectangleShape2D_2qgbp")
+
+[node name="StaticBody2D15" type="StaticBody2D" parent="Techos_container" unique_id=702697111]
+position = Vector2(-1001, 469)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Techos_container/StaticBody2D15" unique_id=1826092064]
+shape = SubResource("RectangleShape2D_2qgbp")
+
+[node name="StaticBody2D16" type="StaticBody2D" parent="Techos_container" unique_id=1505660699]
+position = Vector2(-601, 461)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Techos_container/StaticBody2D16" unique_id=2020857678]
+shape = SubResource("RectangleShape2D_2qgbp")
+
+[node name="StaticBody2D17" type="StaticBody2D" parent="Techos_container" unique_id=633486363]
+position = Vector2(-521, 461)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Techos_container/StaticBody2D17" unique_id=1192052067]
+shape = SubResource("RectangleShape2D_2qgbp")
+
+[node name="StaticBody2D18" type="StaticBody2D" parent="Techos_container" unique_id=755200880]
+position = Vector2(71, 333)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Techos_container/StaticBody2D18" unique_id=367646973]
+shape = SubResource("RectangleShape2D_2qgbp")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Techos_container" unique_id=1550209004]
+position = Vector2(-1155, 289)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Techos_container/StaticBody2D3" unique_id=65660138]
+shape = SubResource("RectangleShape2D_2qgbp")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Techos_container" unique_id=1102698290]
+position = Vector2(-817, 370)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Techos_container/StaticBody2D4" unique_id=2034875491]
+shape = SubResource("RectangleShape2D_2qgbp")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="Techos_container" unique_id=735841625]
+position = Vector2(-268, 332)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Techos_container/StaticBody2D5" unique_id=619642242]
+shape = SubResource("RectangleShape2D_2qgbp")
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="Techos_container" unique_id=62000230]
+position = Vector2(-144, 332)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Techos_container/StaticBody2D6" unique_id=1819078612]
+shape = SubResource("RectangleShape2D_2qgbp")
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="Techos_container" unique_id=520604859]
+position = Vector2(633, 307)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Techos_container/StaticBody2D7" unique_id=368504092]
+shape = SubResource("RectangleShape2D_2qgbp")
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="Techos_container" unique_id=1186060144]
+position = Vector2(1192, 367)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Techos_container/StaticBody2D8" unique_id=1240086451]
+shape = SubResource("RectangleShape2D_2qgbp")
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="Techos_container" unique_id=1760732281]
+position = Vector2(1287, 367)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Techos_container/StaticBody2D9" unique_id=1164290719]
+shape = SubResource("RectangleShape2D_2qgbp")
+
+[node name="StaticBody2D10" type="StaticBody2D" parent="Techos_container" unique_id=1671427166]
+position = Vector2(1642, 406)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Techos_container/StaticBody2D10" unique_id=1468248119]
+shape = SubResource("RectangleShape2D_2qgbp")
+
+[node name="StaticBody2D11" type="StaticBody2D" parent="Techos_container" unique_id=1511668114]
+position = Vector2(1712, 406)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Techos_container/StaticBody2D11" unique_id=1450506125]
+shape = SubResource("RectangleShape2D_2qgbp")
+
+[node name="Spawn_Container" type="Node" parent="." unique_id=675283125]
+
+[node name="spawn_policia_1" type="Marker2D" parent="Spawn_Container" unique_id=621305458]
+position = Vector2(-1730, 523)
+
+[node name="spawn_policia_2" type="Marker2D" parent="Spawn_Container" unique_id=228936116]
+position = Vector2(-1135, 193)
+
+[node name="spawn_policia_3" type="Marker2D" parent="Spawn_Container" unique_id=1042947937]
+position = Vector2(-419, 523)
+
+[node name="spawn_ciudadano_1" type="Marker2D" parent="Spawn_Container" unique_id=107321206]
+position = Vector2(147, 523)
+
+[node name="Limites_container" type="Node" parent="." unique_id=248645965]
+
+[node name="Suelo" type="StaticBody2D" parent="Limites_container" unique_id=841180537]
+position = Vector2(0, 618)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limites_container/Suelo" unique_id=853988649]
+position = Vector2(0, 6)
+shape = SubResource("RectangleShape2D_n146w")
+
+[node name="Lateral" type="StaticBody2D" parent="Limites_container" unique_id=1359580358]
+position = Vector2(-3185, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limites_container/Lateral" unique_id=1108859720]
+position = Vector2(-2, 295)
+shape = SubResource("RectangleShape2D_w5fqw")
+
+[node name="Lateral2" type="StaticBody2D" parent="Limites_container" unique_id=1826364617]
+position = Vector2(3194, 23)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limites_container/Lateral2" unique_id=1346571950]
+position = Vector2(-2, 295)
+shape = SubResource("RectangleShape2D_w5fqw")

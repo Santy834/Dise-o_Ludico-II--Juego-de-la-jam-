@@ -16,3 +16,7 @@ res://ciudadano.gd
 res://Escenas/ciudadano.tscn
 res://Escenas/MAPAS/mundo.gd
 res://Escenas/MAPAS/mundo.tscn
+res://Escenas/Mundo.tscn
+res://Escenas/MAPAS/nivel_1.tscn
+res://Escenas/MAPAS/nivel_1.gd
+res://Escenas/MAPAS/bullet.tscn

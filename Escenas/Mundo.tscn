@@ -1,6 +1,9 @@
-[gd_scene format=3 uid="uid://ri7dnqh3jvjt"]
+[gd_scene format=3 uid="uid://bp7dam2ggkcws"]
 
-[ext_resource type="PackedScene" uid="uid://cyiwh47faij6e" path="res://Escenas/jugador.tscn" id="1_pe05s"]
+[ext_resource type="Script" uid="uid://bcka2frfxq8ko" path="res://Escenas/MAPAS/mundo.gd" id="1_4hew7"]
+[ext_resource type="PackedScene" uid="uid://cyiwh47faij6e" path="res://Escenas/MAPAS/jugador.tscn" id="1_pe05s"]
+[ext_resource type="PackedScene" uid="uid://4j5flrcrywsi" path="res://Escenas/MAPAS/poli.tscn" id="2_wxw8o"]
+[ext_resource type="PackedScene" uid="uid://fj8q7hpwtr0h" path="res://Escenas/ciudadano.tscn" id="3_nhmaw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xsxc0"]
 size = Vector2(1900, 20)
@@ -15,9 +18,17 @@ size = Vector3(120, 20, 1)
 size = Vector2(100, 20)
 
 [node name="Mundo" type="Node2D" unique_id=1544505612]
+script = ExtResource("1_4hew7")
+policia_scene = ExtResource("2_wxw8o")
+ciudadano_scene = ExtResource("3_nhmaw")
+
+[node name="SpawnPolicia" type="Marker2D" parent="." unique_id=1003712510]
+position = Vector2(1404, 482)
 
 [node name="Suelo" type="StaticBody2D" parent="." unique_id=73261874]
 position = Vector2(547, 624)
+collision_layer = 16
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Suelo" unique_id=1732874289]
 shape = SubResource("RectangleShape2D_xsxc0")
@@ -27,7 +38,7 @@ mesh = SubResource("BoxMesh_pe05s")
 
 [node name="jugador" parent="." unique_id=89491122 instance=ExtResource("1_pe05s")]
 position = Vector2(783, 545)
-collision_mask = 3
+collision_mask = 27
 
 [node name="PlataformaContainer" type="Node2D" parent="." unique_id=393707141]
 
@@ -67,3 +78,42 @@ shape = SubResource("RectangleShape2D_ubi47")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="PlataformaContainer/Plataforma4" unique_id=465260521]
 mesh = SubResource("BoxMesh_xywc0")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=877064684]
+
+[node name="Panel" type="Panel" parent="CanvasLayer" unique_id=9863542]
+offset_top = 40.0
+offset_right = 579.0
+offset_bottom = 231.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel" unique_id=378512159]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "BIENVENIDO AL TUTORIAL"
+
+[node name="Label2" type="Label" parent="CanvasLayer/Panel" unique_id=1033529781]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 38.0
+offset_right = 330.0
+offset_bottom = 61.0
+text = "APRENDAMOS LOS CONTROLES BASICOS"
+
+[node name="objetivo_LB" type="Label" parent="CanvasLayer/Panel" unique_id=1865586524]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 72.0
+offset_right = 56.0
+offset_bottom = 95.0
+text = "CONTROLEs"
+
+[node name="finalizar_btn" type="Button" parent="CanvasLayer/Panel" unique_id=850550408]
+layout_mode = 0
+offset_left = 418.0
+offset_top = 144.0
+offset_right = 521.0
+offset_bottom = 175.0
+text = "CONTINUAR"
+
+[connection signal="pressed" from="CanvasLayer/Panel/finalizar_btn" to="." method="_on_finalizar_btn_pressed"]

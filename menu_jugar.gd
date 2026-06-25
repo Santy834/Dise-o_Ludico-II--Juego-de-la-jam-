@@ -17,4 +17,4 @@ func _on_btn_volver_pressed() -> void:
 
 func _on_level_1_pressed() -> void:
 	GameManager.vida_pj = 5
-	get_tree().change_scene_to_file("res://Escenas/MAPAS/Mundo.tscn")
+	get_tree().change_scene_to_file("res://Escenas/MAPAS/nivel_1.tscn")

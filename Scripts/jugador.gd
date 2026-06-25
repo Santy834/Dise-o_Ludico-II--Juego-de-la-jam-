@@ -11,7 +11,7 @@ extends CharacterBody2D
 @export var dash_Speed := 800.0
 @export var dash_duration := 0.2
 @export var dash_cooldown := 0.4
-@export var JUMP_VELOCITY = -800.0
+@export var JUMP_VELOCITY = -600.0
 @export var bullet_scene : PackedScene
 
 var is_dashing : bool = false
