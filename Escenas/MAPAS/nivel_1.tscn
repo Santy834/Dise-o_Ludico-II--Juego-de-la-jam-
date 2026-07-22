@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cyiwh47faij6e" path="res://Escenas/MAPAS/jugador.tscn" id="2_2qgbp"]
 [ext_resource type="PackedScene" uid="uid://fj8q7hpwtr0h" path="res://Escenas/ciudadano.tscn" id="2_n146w"]
 [ext_resource type="PackedScene" uid="uid://4j5flrcrywsi" path="res://Escenas/MAPAS/poli.tscn" id="2_w5fqw"]
+[ext_resource type="PackedScene" uid="uid://ckbwmq6vjnjd" path="res://Escenas/camper.tscn" id="3_qxb48"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2qgbp"]
 size = Vector2(120, 20)
@@ -15,9 +16,16 @@ size = Vector2(6350, 40)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w5fqw"]
 size = Vector2(20, 600)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qxb48"]
+size = Vector2(20, 600)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pfvg6"]
+size = Vector2(128.5, 142.5)
+
 [node name="Nivel_1" type="Node2D" unique_id=1563929464]
 script = ExtResource("1_2qgbp")
 policia_scene = ExtResource("2_w5fqw")
+camper_scene = ExtResource("3_qxb48")
 ciudadano_scene = ExtResource("2_n146w")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1670463389]
@@ -149,8 +157,32 @@ position = Vector2(-1135, 193)
 [node name="spawn_policia_3" type="Marker2D" parent="Spawn_Container" unique_id=1042947937]
 position = Vector2(-419, 523)
 
+[node name="spawn_policia_4" type="Marker2D" parent="Spawn_Container" unique_id=589362609]
+position = Vector2(-833, 523)
+
+[node name="spawn_policia_5" type="Marker2D" parent="Spawn_Container" unique_id=1679767534]
+position = Vector2(-238, 193)
+
+[node name="spawn_policia_6" type="Marker2D" parent="Spawn_Container" unique_id=943781129]
+position = Vector2(478, 523)
+
+[node name="spawn_policia_7" type="Marker2D" parent="Spawn_Container" unique_id=1366870060]
+position = Vector2(615, 251)
+
+[node name="spawn_policia_8" type="Marker2D" parent="Spawn_Container" unique_id=85273651]
+position = Vector2(1221, 284)
+
+[node name="spawn_policia_9" type="Marker2D" parent="Spawn_Container" unique_id=1029569297]
+position = Vector2(1937, 552)
+
 [node name="spawn_ciudadano_1" type="Marker2D" parent="Spawn_Container" unique_id=107321206]
 position = Vector2(147, 523)
+
+[node name="spawn_ciudadano_2" type="Marker2D" parent="Spawn_Container" unique_id=923862448]
+position = Vector2(2029, 523)
+
+[node name="spawn_ciudadano_3" type="Marker2D" parent="Spawn_Container" unique_id=890515967]
+position = Vector2(1691, 523)
 
 [node name="Limites_container" type="Node" parent="." unique_id=248645965]
 
@@ -174,3 +206,32 @@ position = Vector2(3194, 23)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Limites_container/Lateral2" unique_id=1346571950]
 position = Vector2(-2, 295)
 shape = SubResource("RectangleShape2D_w5fqw")
+
+[node name="Area_Spawn" type="Node" parent="." unique_id=482254064]
+
+[node name="PrimerSpawn" type="Area2D" parent="Area_Spawn" unique_id=733886786]
+position = Vector2(-1140, 309)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area_Spawn/PrimerSpawn" unique_id=1394248748]
+shape = SubResource("RectangleShape2D_qxb48")
+
+[node name="SegundoSpawn2" type="Area2D" parent="Area_Spawn" unique_id=152300811]
+position = Vector2(172, 298)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area_Spawn/SegundoSpawn2" unique_id=421320515]
+shape = SubResource("RectangleShape2D_qxb48")
+
+[node name="Despawn" type="Area2D" parent="Area_Spawn" unique_id=869242051]
+position = Vector2(-3112, 495)
+collision_layer = 512
+collision_mask = 256
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area_Spawn/Despawn" unique_id=1303062513]
+position = Vector2(35.75, 23.75)
+shape = SubResource("RectangleShape2D_pfvg6")
+
+[connection signal="body_entered" from="Area_Spawn/PrimerSpawn" to="." method="_on_primer_spawn_body_entered"]
+[connection signal="body_exited" from="Area_Spawn/PrimerSpawn" to="." method="_on_primer_spawn_body_exited"]
+[connection signal="body_entered" from="Area_Spawn/SegundoSpawn2" to="." method="_on_segundo_spawn_2_body_entered"]
+[connection signal="body_exited" from="Area_Spawn/SegundoSpawn2" to="." method="_on_segundo_spawn_2_body_exited"]
+[connection signal="body_entered" from="Area_Spawn/Despawn" to="." method="_on_despawn_body_entered"]

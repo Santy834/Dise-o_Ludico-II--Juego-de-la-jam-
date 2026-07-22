@@ -5,6 +5,7 @@ extends CharacterBody2D
 @onready var dinero_lb: Label = $CanvasLayer/Control/MarginContainer/Dinero/VBoxContainer/Dinero_Lb
 @onready var canvas_layer: CanvasLayer = $CanvasLayer
 @onready var cooldown_vida: Timer = $Cooldown_vida
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 # Variables de movimiento
 @export var SPEED = 300.0
@@ -104,6 +105,7 @@ func recibir_daño(daño : int):
 		return
 		
 	GameManager.vida_pj = GameManager.vida_pj - daño
+	animation_player.play("Damage")
 	inmunidad = true
 	cooldown_vida.start()
 

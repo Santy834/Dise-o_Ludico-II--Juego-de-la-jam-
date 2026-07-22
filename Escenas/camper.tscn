@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://ckbwmq6vjnjd"]
+
+[ext_resource type="Script" uid="uid://bdld54gco2tf8" path="res://camper.gd" id="1_tjo3c"]
+[ext_resource type="PackedScene" uid="uid://thqn38n0w3df" path="res://Escenas/MAPAS/bullet.tscn" id="2_17g2k"]
+[ext_resource type="Texture2D" uid="uid://capfgsnp2u0fd" path="res://Imagenes/Poli/Arrojar/16x32 Sprites del proyecto139.png" id="2_t84eg"]
+[ext_resource type="Texture2D" uid="uid://cn2sg00osh0sk" path="res://Imagenes/Poli/Arrojar/16x32 Sprites del proyecto140.png" id="3_17g2k"]
+[ext_resource type="Texture2D" uid="uid://ddfycsin7nyku" path="res://Imagenes/Poli/Arrojar/16x32 Sprites del proyecto141.png" id="4_h0a6k"]
+[ext_resource type="Texture2D" uid="uid://cwwueg7emiyts" path="res://Imagenes/Poli/Arrojar/16x32 Sprites del proyecto142.png" id="5_2ses2"]
+[ext_resource type="Texture2D" uid="uid://6t563k6v5oww" path="res://Imagenes/Poli/Arrojar/16x32 Sprites del proyecto143.png" id="6_fca1c"]
+[ext_resource type="Texture2D" uid="uid://dbtk44opvsvxs" path="res://Imagenes/Poli/Arrojar/16x32 Sprites del proyecto144.png" id="7_vrmay"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wafos"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_t84eg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_17g2k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_h0a6k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_2ses2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_fca1c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_vrmay")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4sogs"]
+radius = 55.0
+height = 236.0
+
+[node name="Camper" type="CharacterBody2D" unique_id=530335097 groups=["Policia"]]
+scale = Vector2(0.5, 0.5)
+collision_layer = 2
+collision_mask = 17
+script = ExtResource("1_tjo3c")
+bullet_scene = ExtResource("2_17g2k")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1597273438]
+sprite_frames = SubResource("SpriteFrames_wafos")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=929584614]
+position = Vector2(-7, 40)
+shape = SubResource("CapsuleShape2D_4sogs")

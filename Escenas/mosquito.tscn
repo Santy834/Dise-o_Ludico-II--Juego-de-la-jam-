@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://bfisokeh57gpe"]
+
+[ext_resource type="Script" uid="uid://bh0ahpke1issy" path="res://mosquito.gd" id="1_nvdu6"]
+[ext_resource type="Texture2D" uid="uid://ctas1fiaulnr0" path="res://Imagenes/Mosquito/Mosquito1.png" id="2_xlekj"]
+[ext_resource type="Texture2D" uid="uid://c6ivk3vewxb3s" path="res://Imagenes/Mosquito/Mosquito2.png" id="3_p7dq5"]
+[ext_resource type="Texture2D" uid="uid://23pu0oycclqr" path="res://Imagenes/Mosquito/Mosquito3.png" id="4_gwn2n"]
+[ext_resource type="Texture2D" uid="uid://djegfiaawluav" path="res://Imagenes/Mosquito/Mosquito4.png" id="5_bmt6r"]
+[ext_resource type="Texture2D" uid="uid://daurngdbtlppm" path="res://Imagenes/Mosquito/Mosquito5.png" id="6_x08e7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_33mb1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_xlekj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_p7dq5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_gwn2n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_bmt6r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_x08e7")
+}],
+"loop": true,
+"name": &"Idel",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5s4lc"]
+radius = 45.0
+height = 156.0
+
+[node name="Mosquito" type="CharacterBody2D" unique_id=882626022]
+script = ExtResource("1_nvdu6")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1861685242]
+sprite_frames = SubResource("SpriteFrames_33mb1")
+animation = &"Idel"
+frame_progress = 0.7479786
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=352622047]
+position = Vector2(10, 3)
+shape = SubResource("CapsuleShape2D_5s4lc")

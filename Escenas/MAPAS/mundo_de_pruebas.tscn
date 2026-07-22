@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://dwksp4oaigidv"]
+
+[ext_resource type="Script" uid="uid://wrqspn1o570v" path="res://Escenas/MAPAS/mundo_de_pruebas.gd" id="1_ithe2"]
+[ext_resource type="PackedScene" uid="uid://cyiwh47faij6e" path="res://Escenas/MAPAS/jugador.tscn" id="1_pj40i"]
+[ext_resource type="PackedScene" uid="uid://bfisokeh57gpe" path="res://Escenas/mosquito.tscn" id="2_ithe2"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_2h48r"]
+size = Vector3(1150, 10, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nx6sx"]
+size = Vector2(1150, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_c50vk"]
+size = Vector3(100, 10, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ui64x"]
+size = Vector2(100, 10)
+
+[node name="Mundo de pruebas" type="Node2D" unique_id=573575395]
+script = ExtResource("1_ithe2")
+
+[node name="jugador" parent="." unique_id=89491122 instance=ExtResource("1_pj40i")]
+position = Vector2(239, 577)
+
+[node name="Piso" type="StaticBody2D" parent="." unique_id=1747604119]
+position = Vector2(589, 639)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Piso" unique_id=325321259]
+position = Vector2(-12, 0)
+mesh = SubResource("BoxMesh_2h48r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Piso" unique_id=1602958255]
+position = Vector2(-13, 0)
+shape = SubResource("RectangleShape2D_nx6sx")
+
+[node name="Plataforma" type="StaticBody2D" parent="." unique_id=356045292]
+position = Vector2(1001, 507)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Plataforma" unique_id=759767047]
+mesh = SubResource("BoxMesh_c50vk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Plataforma" unique_id=1659956391]
+shape = SubResource("RectangleShape2D_ui64x")
+
+[node name="Plataforma2" type="StaticBody2D" parent="." unique_id=1796318178]
+position = Vector2(147, 507)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Plataforma2" unique_id=1662705042]
+mesh = SubResource("BoxMesh_c50vk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Plataforma2" unique_id=289485772]
+shape = SubResource("RectangleShape2D_ui64x")
+
+[node name="Mosquito" parent="." unique_id=882626022 instance=ExtResource("2_ithe2")]
+position = Vector2(1490, 142)

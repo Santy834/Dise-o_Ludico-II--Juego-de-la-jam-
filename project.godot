@@ -29,6 +29,8 @@ folder_colors={
 [global_group]
 
 Jugador=""
+Policia=""
+Ciudadano=""
 
 [input]
 
