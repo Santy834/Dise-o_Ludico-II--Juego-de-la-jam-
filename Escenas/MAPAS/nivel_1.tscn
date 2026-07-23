@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://dnpoed3003ku3"]
 
-[ext_resource type="Script" uid="uid://ca2516rdfpmau" path="res://Escenas/MAPAS/nivel_1.gd" id="1_2qgbp"]
+[ext_resource type="Script" uid="uid://ca2516rdfpmau" path="res://Scripts/nivel_1.gd" id="1_2qgbp"]
 [ext_resource type="Texture2D" uid="uid://d383t0i1b3rqt" path="res://Imagenes/Ciudad.png" id="1_660tx"]
-[ext_resource type="PackedScene" uid="uid://cyiwh47faij6e" path="res://Escenas/MAPAS/jugador.tscn" id="2_2qgbp"]
+[ext_resource type="PackedScene" uid="uid://cyiwh47faij6e" path="res://Escenas/jugador.tscn" id="2_2qgbp"]
 [ext_resource type="PackedScene" uid="uid://fj8q7hpwtr0h" path="res://Escenas/ciudadano.tscn" id="2_n146w"]
-[ext_resource type="PackedScene" uid="uid://4j5flrcrywsi" path="res://Escenas/MAPAS/poli.tscn" id="2_w5fqw"]
+[ext_resource type="PackedScene" uid="uid://4j5flrcrywsi" path="res://Escenas/poli.tscn" id="2_w5fqw"]
 [ext_resource type="PackedScene" uid="uid://ckbwmq6vjnjd" path="res://Escenas/camper.tscn" id="3_qxb48"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2qgbp"]

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dwksp4oaigidv"]
 
-[ext_resource type="Script" uid="uid://wrqspn1o570v" path="res://Escenas/MAPAS/mundo_de_pruebas.gd" id="1_ithe2"]
-[ext_resource type="PackedScene" uid="uid://cyiwh47faij6e" path="res://Escenas/MAPAS/jugador.tscn" id="1_pj40i"]
+[ext_resource type="Script" uid="uid://wrqspn1o570v" path="res://Scripts/mundo_de_pruebas.gd" id="1_ithe2"]
+[ext_resource type="PackedScene" uid="uid://cyiwh47faij6e" path="res://Escenas/jugador.tscn" id="1_pj40i"]
 [ext_resource type="PackedScene" uid="uid://bfisokeh57gpe" path="res://Escenas/mosquito.tscn" id="2_ithe2"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_2h48r"]
@@ -51,5 +51,5 @@ mesh = SubResource("BoxMesh_c50vk")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Plataforma2" unique_id=289485772]
 shape = SubResource("RectangleShape2D_ui64x")
 
-[node name="Mosquito" parent="." unique_id=882626022 instance=ExtResource("2_ithe2")]
-position = Vector2(1490, 142)
+[node name="Mosquito" parent="." unique_id=882626022 groups=["Enemigo"] instance=ExtResource("2_ithe2")]
+position = Vector2(259, 268)

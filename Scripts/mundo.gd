@@ -72,7 +72,7 @@ func paso_recoger():
 func mostrar_mensaje():
 	match current_step:
 		TutorialStep.MOVERSE:
-			objetivo_lb.text = "USA 'A' y 'D' PARA MOVERTE"
+			objetivo_lb.text = "USA '←' y '→' PARA MOVERTE"
 
 		TutorialStep.SALTAR:
 			objetivo_lb.text = "PRESIONA 'ESPACIO' PARA SALTAR"

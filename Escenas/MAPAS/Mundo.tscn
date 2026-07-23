@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bp7dam2ggkcws"]
 
-[ext_resource type="Script" uid="uid://bcka2frfxq8ko" path="res://Escenas/MAPAS/mundo.gd" id="1_4hew7"]
-[ext_resource type="PackedScene" uid="uid://cyiwh47faij6e" path="res://Escenas/MAPAS/jugador.tscn" id="1_pe05s"]
-[ext_resource type="PackedScene" uid="uid://4j5flrcrywsi" path="res://Escenas/MAPAS/poli.tscn" id="2_wxw8o"]
+[ext_resource type="Script" uid="uid://bcka2frfxq8ko" path="res://Scripts/mundo.gd" id="1_4hew7"]
+[ext_resource type="PackedScene" uid="uid://cyiwh47faij6e" path="res://Escenas/jugador.tscn" id="1_pe05s"]
+[ext_resource type="PackedScene" uid="uid://4j5flrcrywsi" path="res://Escenas/poli.tscn" id="2_wxw8o"]
 [ext_resource type="PackedScene" uid="uid://fj8q7hpwtr0h" path="res://Escenas/ciudadano.tscn" id="3_nhmaw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xsxc0"]

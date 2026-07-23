@@ -33,7 +33,7 @@ func actualizar_precio():
 	if item == ItemType.PARLANTE:
 		precio = 150
 	if item == ItemType.COBRE:
-		precio = 50
+		precio = 100
 	if item == ItemType.ELECTRODIMESTICO:
 		precio = 200
 

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ckbwmq6vjnjd"]
 
-[ext_resource type="Script" uid="uid://bdld54gco2tf8" path="res://camper.gd" id="1_tjo3c"]
-[ext_resource type="PackedScene" uid="uid://thqn38n0w3df" path="res://Escenas/MAPAS/bullet.tscn" id="2_17g2k"]
+[ext_resource type="Script" uid="uid://bdld54gco2tf8" path="res://Scripts/camper.gd" id="1_tjo3c"]
+[ext_resource type="PackedScene" uid="uid://thqn38n0w3df" path="res://Escenas/bullet.tscn" id="2_17g2k"]
 [ext_resource type="Texture2D" uid="uid://capfgsnp2u0fd" path="res://Imagenes/Poli/Arrojar/16x32 Sprites del proyecto139.png" id="2_t84eg"]
 [ext_resource type="Texture2D" uid="uid://cn2sg00osh0sk" path="res://Imagenes/Poli/Arrojar/16x32 Sprites del proyecto140.png" id="3_17g2k"]
 [ext_resource type="Texture2D" uid="uid://ddfycsin7nyku" path="res://Imagenes/Poli/Arrojar/16x32 Sprites del proyecto141.png" id="4_h0a6k"]
@@ -39,7 +39,7 @@ animations = [{
 radius = 55.0
 height = 236.0
 
-[node name="Camper" type="CharacterBody2D" unique_id=530335097 groups=["Policia"]]
+[node name="Camper" type="CharacterBody2D" unique_id=530335097 groups=["Enemigo"]]
 scale = Vector2(0.5, 0.5)
 collision_layer = 2
 collision_mask = 17

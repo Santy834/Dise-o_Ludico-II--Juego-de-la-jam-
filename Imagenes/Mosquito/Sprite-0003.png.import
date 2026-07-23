@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wqijtfklgwx1"
-path="res://.godot/imported/1_Limpio.png-6d72a5c66f156a845cd9bf78769819bc.ctex"
+uid="uid://dpg0r0hnnuqd3"
+path="res://.godot/imported/Sprite-0003.png-6ed7adbb9bf08826d5fcef1e950df1d0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Escenas/MAPAS/1_Limpio.png"
-dest_files=["res://.godot/imported/1_Limpio.png-6d72a5c66f156a845cd9bf78769819bc.ctex"]
+source_file="res://Imagenes/Mosquito/Sprite-0003.png"
+dest_files=["res://.godot/imported/Sprite-0003.png-6ed7adbb9bf08826d5fcef1e950df1d0.ctex"]
 
 [params]
 

@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://4j5flrcrywsi"]
 
-[ext_resource type="Script" uid="uid://djwjqqsaj0xpi" path="res://poli.gd" id="1_6wp88"]
+[ext_resource type="Script" uid="uid://djwjqqsaj0xpi" path="res://Scripts/poli.gd" id="1_6wp88"]
 [ext_resource type="Texture2D" uid="uid://capfgsnp2u0fd" path="res://Imagenes/Poli/Arrojar/16x32 Sprites del proyecto139.png" id="2_dr5ej"]
-[ext_resource type="PackedScene" uid="uid://thqn38n0w3df" path="res://Escenas/MAPAS/bullet.tscn" id="2_nv7um"]
+[ext_resource type="PackedScene" uid="uid://thqn38n0w3df" path="res://Escenas/bullet.tscn" id="2_nv7um"]
 [ext_resource type="Texture2D" uid="uid://cn2sg00osh0sk" path="res://Imagenes/Poli/Arrojar/16x32 Sprites del proyecto140.png" id="3_nv7um"]
 [ext_resource type="Texture2D" uid="uid://ddfycsin7nyku" path="res://Imagenes/Poli/Arrojar/16x32 Sprites del proyecto141.png" id="4_tnxup"]
 [ext_resource type="Texture2D" uid="uid://cwwueg7emiyts" path="res://Imagenes/Poli/Arrojar/16x32 Sprites del proyecto142.png" id="5_7kagp"]
@@ -72,7 +72,7 @@ height = 186.0
 radius = 76.0
 height = 234.0
 
-[node name="Poli" type="CharacterBody2D" unique_id=1959539958 groups=["Policia"]]
+[node name="Poli" type="CharacterBody2D" unique_id=1959539958 groups=["Enemigo"]]
 scale = Vector2(0.5, 0.5)
 collision_layer = 2
 collision_mask = 17

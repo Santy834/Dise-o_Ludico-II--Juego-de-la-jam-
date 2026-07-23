@@ -14,6 +14,7 @@ enum Estado {
 	Posicionarse
 }
 
+var vida = 1
 var estado_actual : Estado = Estado.Acercarse
 var jugador : CharacterBody2D 
 var tiempo_idle := 0.0
@@ -34,16 +35,17 @@ func _physics_process(delta):
 
 		Estado.Idle:
 			actualizar_idle(delta)
-			animated_sprite.stop()
+			animated_sprite.play("Idel")
 
 		Estado.Ataque:
 			actualizar_ataque()
-			animated_sprite.stop()
+			animated_sprite.play("Vuelo")
 
 		Estado.Posicionarse:
 			actualizar_posicionarse()
 			animated_sprite.stop()
 
+	vista() #Esta función nos sirve para que el mosquito mire siempre al jugador
 	move_and_slide()
 
 func cambiar_estado(nuevo_estado: Estado):
@@ -68,6 +70,8 @@ func entrar_acercarse():
 func actualizar_acercarse():
 	var direccion = (jugador.global_position - global_position).normalized()
 	velocity = direccion * velocidad
+	
+	
 	
 	var distancia = (global_position.distance_to(jugador.global_position))
 	if distancia <= distancia_idle:
@@ -106,7 +110,8 @@ func entrar_posicionarse():
 
 func actualizar_posicionarse():
 	var direccion = (punto_retorno - global_position).normalized()
-	velocity += direccion * velocidad 
+
+	velocity += direccion * velocidad
 	
 	var distancia = (global_position.distance_to(jugador.global_position))
 	
@@ -115,3 +120,14 @@ func actualizar_posicionarse():
 			cambiar_estado(Estado.Idle)
 		else:
 			cambiar_estado(Estado.Acercarse)
+
+func recibir_daño(golpe : int):
+	if vida > 0:
+		vida = vida - golpe
+		print("Me la diste")
+	else:
+		queue_free()
+
+func vista():
+	var direccion = sign(jugador.global_position.x - global_position.x)
+	animated_sprite.flip_h = direccion < 0

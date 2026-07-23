@@ -114,7 +114,7 @@ func recibir_daño(golpe : int):
 	if vida > 0:
 		vida = vida - golpe
 		print("La vida del policia es: ",vida)
-		GameManager.policia_muere = true
+		GameManager.policia_muere = true #Solamente es usado para el tutoríal
 	else:
 		queue_free()
 	

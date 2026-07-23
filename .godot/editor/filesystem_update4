@@ -1,4 +1,4 @@
-res://Escenas/mosquito.tscn
-res://mosquito.gd
 res://Escenas/MAPAS/mundo_de_pruebas.tscn
-res://Escenas/MAPAS/mundo_de_pruebas.gd
+res://Scripts/jugador.gd
+res://Escenas/MAPAS/objetos.tscn
+res://Scripts/mundo.gd

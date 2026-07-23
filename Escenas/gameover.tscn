@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://duwttq2r5ejfy"]
 
 [ext_resource type="FontFile" uid="uid://b3oidbp3x1p7q" path="res://Fuentes/tinypixel.otf" id="1_q5hn2"]
-[ext_resource type="Script" uid="uid://cltay3uxytxbm" path="res://Escenas/gameover.gd" id="1_vhxfw"]
+[ext_resource type="Script" uid="uid://cltay3uxytxbm" path="res://Scripts/gameover.gd" id="1_vhxfw"]
 
 [node name="GAMEOVER" type="Control" unique_id=448369594]
 layout_mode = 3

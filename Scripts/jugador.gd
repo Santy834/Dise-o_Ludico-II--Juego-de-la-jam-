@@ -27,8 +27,8 @@ var inmunidad : bool = false
 var has_shot : bool = false
 var attacking : bool = false
 
-
 var hizo_doble_salto : bool = false
+var direccion_disparo := Vector2.RIGHT #Guardamos la ultima dirección en la que miro
 
 enum estados {
 	IDLE,
@@ -52,7 +52,7 @@ func _ready() -> void:
 	estado_actual = estados.IDLE
 
 func _physics_process(delta: float) -> void:
-	if Input.is_action_just_pressed("Click_izq"):
+	if Input.is_action_just_pressed("shoot"):
 		attacking = true
 	
 	if attacking == true:
@@ -64,6 +64,7 @@ func _physics_process(delta: float) -> void:
 		GameManager.is_interaccion = false
 
 	if GameManager.vida_pj > 0:
+		actualizar_apuntado()
 		_salto(delta)
 		movimiento(delta)
 		actualizar_estado()
@@ -71,6 +72,16 @@ func _physics_process(delta: float) -> void:
 		actualizar_HUD()
 	else:
 		game_over()
+
+func actualizar_apuntado():
+	var dir = Vector2.ZERO
+	
+	dir.x = Input.get_axis("aim_left", "aim_right")
+	dir.y = Input.get_axis("aim_down", "aim_up")
+	
+	dir.y *= -1
+	if dir != Vector2.ZERO:
+		direccion_disparo = dir.normalized()
 
 func movimiento(delta : float):
 	
@@ -82,10 +93,14 @@ func movimiento(delta : float):
 		
 		if dash_timer <= 0:
 			is_dashing = false
-	
+	elif Input.is_action_pressed("aim") and is_on_floor():
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+		return
+		
 	else: 
+
 		#Movimiento horizontal
-		var direction := Input.get_axis("A", "D")
+		var direction := Input.get_axis("aim_left", "aim_right")
 		
 		if direction != 0 :
 			dash_direction = sign(direction)
@@ -156,17 +171,6 @@ func check_attack_frame():
 		
 
 func disparar():
-	var mouse_pos = get_global_mouse_position()
-
-	if not animated_sprite.flip_h:
-		# Mira a la derecha
-		if mouse_pos.x < global_position.x:
-			return
-	elif animated_sprite.flip_h:
-		# Mira a la izquierda
-		if mouse_pos.x > global_position.x:
-			return
-		
 
 	var bullet = bullet_scene.instantiate()
 	
@@ -177,9 +181,7 @@ func disparar():
 
 	bullet.global_position = global_position + spawn_offset
 
-	bullet.direction = (
-		mouse_pos - bullet.global_position
-	).normalized()
+	bullet.direction = direccion_disparo
 
 	get_parent().add_child(bullet)
 
@@ -217,9 +219,9 @@ func actualizar_estado():
 		return
 
 func animation_update():
-	if velocity.x < 0:
+	if direccion_disparo.x < 0:
 		animated_sprite.flip_h = true
-	else:
+	elif direccion_disparo.x > 0:
 		animated_sprite.flip_h = false
 	
 	if estado_actual != estado_anterior:
