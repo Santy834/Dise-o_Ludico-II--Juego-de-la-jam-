@@ -63,10 +63,11 @@ func crear_camper(spawn : Marker2D):
 
 func _on_primer_spawn_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Jugador") and spawn1 <= 0:
-		crear_policia_melee(spawn_policia_4)
-		crear_camper(spawn_policia_5)
-		crear_policia_shoot(spawn_policia_6)
-		crear_ciudadano(spawn_ciudadano_2)
+		call_deferred("crear_policia_melee", spawn_policia)
+		call_deferred("crear_policia_melee" ,spawn_policia_4)
+		call_deferred("crear_camper", spawn_policia_5)
+		call_deferred("crear_policia_shoot", spawn_policia_6)
+		call_deferred("crear_ciudadano", spawn_ciudadano_2)
 		spawn1 = spawn1 + 1
 
 func _on_primer_spawn_body_exited(body: Node2D) -> void:
@@ -75,10 +76,12 @@ func _on_primer_spawn_body_exited(body: Node2D) -> void:
 
 func _on_segundo_spawn_2_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Jugador") and spawn2 <= 0:
-		crear_camper(spawn_policia_7)
-		crear_camper(spawn_policia_8)
-		crear_policia_melee(spawn_policia_9)
-		crear_ciudadano(spawn_ciudadano_3)
+		call_deferred("crear_camper", spawn_policia_7)
+		call_deferred("crear_camper", spawn_policia_8)
+		call_deferred("crear_policia_melee", spawn_policia_9)
+		call_deferred("crear_policia_melee", spawn_policia_3)
+		call_deferred("crear_policia_shoot", spawn_policia)
+		call_deferred("crear_ciudadano", spawn_ciudadano_3)
 		spawn2 = spawn2 + 1
 
 func _on_segundo_spawn_2_body_exited(body: Node2D) -> void:

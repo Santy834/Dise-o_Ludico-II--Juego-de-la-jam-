@@ -63,7 +63,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		GameManager.is_interaccion = false
 
-	if GameManager.vida_pj > 0:
+	if GameManager.vida_pj > 0 or GameManager.dialogo_activo == true:
 		actualizar_apuntado()
 		_salto(delta)
 		movimiento(delta)

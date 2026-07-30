@@ -1,0 +1,81 @@
+~ start
+do GameManager.dialogo_acivo = true
+Voz de tutorial:
+	¿Qué hacer pibe? Antes de salir a repartir plomo por ahí. Primero tenes que aprender a caminar. Bienvenido al tutorial de JHONNYHOOD.
+	Empecemos con el tutorial.
+
+JHONNYHOOD:
+	¿De que mierda hablas flaco? ¿Donde estoy? ¿Quién sos?
+
+Voz de tutorial:
+	Mucha chachara pibe. Soy "LA VOZ DEL TUTORIAL" el creador es tan vago que ni nombre me puso.
+	En fin. Para moverte usa las flechas izquierda y derecha del teclado para moverte.
+	
+=> END
+
+~ Mision_2
+Voz de tutorial:
+	Bien pibe. Es facil moverte ¿No?
+	
+Voz de tutorial:
+	Ahora probemos con los saltos. Apretá la barra espaciadora y pega un salto. 
+	Como un pibe cuando suena "MUCHAAACHOOOS".
+
+JHONNYHOOD: 
+	Eso me suena familiar.
+=> END
+
+~ Mision_3
+Voz de tutorial:
+	Ahí va, ya le estas agarrando la mano
+
+Voz de tutorial: 
+	Sigamos con la puntería. Aparecieron unas botellas de vidrio, por ahí. Apreta "Crtl izq" para quedarte quieto
+	y con las flechas del teclado apunta hacia los objetivos. Cuando los tengas en la mira reventalos con la "Z"
+
+=> END
+
+~ Mision_4
+Voz de tutorial: 
+	Estas canchero en esto.
+
+Voz de tutorial: 
+	Sigamos con... ¡PARA WACHO AHÍ VIENE LA GORRA! RAPIDO REVENTALO A PIEDRAZOS A ÉL TAMBIÉN.
+
+JHONNYHOOD: La con...
+=> END
+
+~ Mision_5
+Voz de tutorial: 
+	Menos mal boludo... Un poco más y terminabamos sopre. 
+
+JHONNYHOOD: 
+	Si dejate de joder. Me cagué todo.
+
+Voz de tutorial: 
+	Nos queda una ultima lección.
+
+Voz de tutorial: 
+	¿Ves a ese panchito de ahí? Acercate despacito y apreta la "E". Pungeale todo
+	el celu, las zapas, cualquier cosa que tenga encima.
+
+=> END
+
+~ final
+Voz de tutorial: 
+	Excelente pibe. Estas listo, ya sabes como moverte por la jungla
+
+JHONNYHOOD: 
+	Eh... Sí ¿Gracias? 
+
+JHONNYHOOD: 
+	¿Y ahora que hacemos?
+
+Voz de tutorial: 
+	Vos despreocupate, dame la plata que yo te la guardo y pasa por la puerta.
+
+JHONNYHOOD: 
+	No me estas queriendo cagar ¿No?
+
+Voz de tutorial:
+	JHONNYHOOD, no seas boludo ¿Como voy a hacer eso?

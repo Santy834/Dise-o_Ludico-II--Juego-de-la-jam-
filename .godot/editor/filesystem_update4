@@ -1,4 +1,2 @@
-res://Escenas/MAPAS/mundo_de_pruebas.tscn
-res://Scripts/jugador.gd
-res://Escenas/MAPAS/objetos.tscn
-res://Scripts/mundo.gd
+res://nivel_2.tscn
+res://Scripts/GameManager.gd

@@ -4,6 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://cyiwh47faij6e" path="res://Escenas/jugador.tscn" id="1_pe05s"]
 [ext_resource type="PackedScene" uid="uid://4j5flrcrywsi" path="res://Escenas/poli.tscn" id="2_wxw8o"]
 [ext_resource type="PackedScene" uid="uid://fj8q7hpwtr0h" path="res://Escenas/ciudadano.tscn" id="3_nhmaw"]
+[ext_resource type="Resource" uid="uid://cw5p15qw8fta4" path="res://Dialogos/Inicio_tutorial.dialogue" id="4_qfgi5"]
+[ext_resource type="Texture2D" uid="uid://bqrw7dk4j4yp8" path="res://Imagenes/Puerta/Puerta2.png" id="6_ly0hj"]
+[ext_resource type="Texture2D" uid="uid://dtfe0ob3qwnqh" path="res://Imagenes/Puerta/Puerta1.png" id="7_tpp8t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xsxc0"]
 size = Vector2(1900, 20)
@@ -17,10 +20,33 @@ size = Vector3(120, 20, 1)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ubi47"]
 size = Vector2(100, 20)
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_4r7gd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_ly0hj")
+}],
+"loop": true,
+"name": &"Cerrado",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_tpp8t")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jltqs"]
+size = Vector2(71, 144)
+
 [node name="Mundo" type="Node2D" unique_id=1544505612]
 script = ExtResource("1_4hew7")
 policia_scene = ExtResource("2_wxw8o")
 ciudadano_scene = ExtResource("3_nhmaw")
+dialogo = ExtResource("4_qfgi5")
 
 [node name="SpawnPolicia" type="Marker2D" parent="." unique_id=1003712510]
 position = Vector2(1404, 482)
@@ -35,10 +61,6 @@ shape = SubResource("RectangleShape2D_xsxc0")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Suelo" unique_id=249927708]
 mesh = SubResource("BoxMesh_pe05s")
-
-[node name="jugador" parent="." unique_id=89491122 instance=ExtResource("1_pe05s")]
-position = Vector2(783, 545)
-collision_mask = 27
 
 [node name="PlataformaContainer" type="Node2D" parent="." unique_id=393707141]
 
@@ -82,15 +104,17 @@ mesh = SubResource("BoxMesh_xywc0")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=877064684]
 
 [node name="Panel" type="Panel" parent="CanvasLayer" unique_id=9863542]
-offset_top = 40.0
-offset_right = 579.0
-offset_bottom = 231.0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -436.0
+offset_bottom = 60.0
+grow_horizontal = 0
 
 [node name="Label" type="Label" parent="CanvasLayer/Panel" unique_id=378512159]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
-text = "BIENVENIDO AL TUTORIAL"
 
 [node name="Label2" type="Label" parent="CanvasLayer/Panel" unique_id=1033529781]
 layout_mode = 0
@@ -98,22 +122,37 @@ offset_left = 16.0
 offset_top = 38.0
 offset_right = 330.0
 offset_bottom = 61.0
-text = "APRENDAMOS LOS CONTROLES BASICOS"
 
 [node name="objetivo_LB" type="Label" parent="CanvasLayer/Panel" unique_id=1865586524]
-layout_mode = 0
-offset_left = 16.0
-offset_top = 72.0
-offset_right = 56.0
-offset_bottom = 95.0
-text = "CONTROLEs"
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -208.0
+offset_top = -24.5
+offset_right = 203.0
+offset_bottom = 24.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "CONTROLES
+"
 
-[node name="finalizar_btn" type="Button" parent="CanvasLayer/Panel" unique_id=850550408]
-layout_mode = 0
-offset_left = 418.0
-offset_top = 144.0
-offset_right = 521.0
-offset_bottom = 175.0
-text = "CONTINUAR"
+[node name="Puerta" type="Area2D" parent="." unique_id=582084028]
+position = Vector2(1427, 526)
 
-[connection signal="pressed" from="CanvasLayer/Panel/finalizar_btn" to="." method="_on_finalizar_btn_pressed"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Puerta" unique_id=33130193]
+scale = Vector2(0.5, 0.73214287)
+sprite_frames = SubResource("SpriteFrames_4r7gd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Puerta" unique_id=1862787421]
+position = Vector2(-1.5, 7)
+shape = SubResource("RectangleShape2D_jltqs")
+disabled = true
+
+[node name="jugador" parent="." unique_id=89491122 instance=ExtResource("1_pe05s")]
+position = Vector2(783, 545)
+collision_mask = 27
+
+[connection signal="body_entered" from="Puerta" to="." method="_on_puerta_body_entered"]

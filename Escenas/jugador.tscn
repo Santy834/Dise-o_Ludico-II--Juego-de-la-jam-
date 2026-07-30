@@ -45,7 +45,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Arrojar",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -175,7 +175,7 @@ bullet_scene = ExtResource("2_j0n4s")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1729458687]
 position = Vector2(1, -30)
 sprite_frames = SubResource("SpriteFrames_bgivf")
-animation = &"Salto"
+animation = &"Arrojar"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=204863169]
 position = Vector2(0, 34)

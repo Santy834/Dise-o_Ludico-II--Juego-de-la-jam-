@@ -2,10 +2,11 @@ extends Node2D
 
 @onready var objetivo_lb: Label = $CanvasLayer/Panel/objetivo_LB
 @onready var spawn_policia = $SpawnPolicia
-@onready var finalizar_btn: Button = $CanvasLayer/Panel/finalizar_btn
+@onready var collision_shape: CollisionShape2D = $Puerta/CollisionShape2D
 
 @export var policia_scene: PackedScene
 @export var ciudadano_scene: PackedScene
+@export var dialogo : DialogueResource
 
 enum TutorialStep {
 	MOVERSE,
@@ -20,7 +21,7 @@ var current_step = TutorialStep.MOVERSE
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	mostrar_mensaje()
-	finalizar_btn.visible = false
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -67,7 +68,8 @@ func paso_recoger():
 	if current_step == TutorialStep.RECOGER and GameManager.ciudadano_roba2:
 		current_step = TutorialStep.FINALIZADO
 		mostrar_mensaje()
-		finalizar_btn.visible = true
+		collision_shape.disabled = false
+		
 
 func mostrar_mensaje():
 	match current_step:
@@ -101,6 +103,6 @@ func crear_ciudadano():
 
 	add_child(ciudadano)
 
-
-func _on_finalizar_btn_pressed() -> void:
-	get_tree().change_scene_to_file("res://Escenas/MAPAS/nivel_1.tscn")
+func _on_puerta_body_entered(body: Node2D) -> void:
+	if body.is_in_group("Jugador"):
+		get_tree().change_scene_to_file("res://Escenas/MAPAS/nivel_1.tscn")
